@@ -16,13 +16,6 @@ export const IT_FACULTY_MEMBERS = [
   },
   // Professors
   {
-    name: "Dr. Vikas Goel",
-    role: "Professor",
-    qualification: "Ph.D.",
-    image: "/IT/Dr. Vikas Goel.webp",
-    university: "Uttrakhand Technical University"
-  },
-  {
     name: "Dr. Jitendra Kumar Seth",
     role: "Professor",
     qualification: "Ph.D.",
@@ -65,13 +58,6 @@ export const IT_FACULTY_MEMBERS = [
     qualification: "Ph.D.",
     image: "/IT/Dr. Urvashi Chugh.webp",
     university: "Jay Pee Iniversity of Information and Technology Waknaghar"
-  },
-  {
-    name: "Dr. Veepin Kumar",
-    role: "Associate Professor",
-    qualification: "Ph.D.",
-    image: "/IT/Dr. Veepin Kumar.webp",
-    university: "IKGPTU, Jalandhar"
   },
   {
     name: "Dr. Analp Pathak",
