@@ -1,10 +1,9 @@
 import Navbar from "./Navbar";
-import ProgramDetails from "./ProgramDetails";
+
 import Footer from "./Footer";
 import BackToTop from "./BackToTop";
 import ImportantLinks from "./ImportantLinks";
 
-import { IT_FACULTY_MEMBERS } from "@/app/data/it-faculty-members";
 
 function HeadAssets({ stylesheets, fontPreloads }) {
   return (
@@ -42,37 +41,7 @@ function FloatingWidgets() {
   );
 }
 
-function ProgramSectionNav() {
-  const sectionLinks = [
-    { label: "Overview",                   href: "#overview" },
-    { label: "Highlights",                 href: "#infrastructure" },
-    { label: "Placement",                  href: "#placement" },
-    { label: "Emerging Technology Pathways", href: "#roadmap" },
-    { label: "COE",                        href: "#coe" },
-    { label: "Clubs",                      href: "#clubs" },
-    { label: "Dean's Message",             href: "#dean-message" },
-    { label: "Faculty",                    href: "#faculty" },
-    { label: "Achievers",                  href: "#achievers" },
-    { label: "Publications & Research",    href: "#research" },
-    { label: "Syllabus",                   href: "#syllabus" },
-  ];
 
-  return (
-    <div className="bg-white border-bottom shadow-sm w-100" style={{ position: "sticky", top: 0, zIndex: 35 }}>
-      <div className="position-relative py-3">
-        <div className="overflow-auto px-4 px-md-5" style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
-          <nav className="d-flex gap-4 justify-content-md-center" style={{ minWidth: "max-content" }}>
-            {sectionLinks.map((link) => (
-              <a key={link.label} href={link.href} className="kiet-program-section-link">
-                {link.label}
-              </a>
-            ))}
-          </nav>
-        </div>
-      </div>
-    </div>
-  );
-}
 
 export function DepartmentMainPage({ bodyClass, stylesheets, fontPreloads }) {
   return (
@@ -80,16 +49,13 @@ export function DepartmentMainPage({ bodyClass, stylesheets, fontPreloads }) {
       <HeadAssets stylesheets={stylesheets} fontPreloads={fontPreloads} />
       <div className={`${bodyClass} kiet-page-scope`}>
         <Navbar />
-        <ProgramSectionNav />
-        <ProgramDetails
-          faculty={IT_FACULTY_MEMBERS}
-          facultyPageHref="/programs/undergraduate-programs/it/faculty"
-        />
+
+        <div>clutrla clubs </div>
         <Footer />
         <FloatingWidgets />
         <ImportantLinks />
         <BackToTop />
-      </div>
+      </div >
     </>
   );
 }
