@@ -1,8 +1,8 @@
 export const IT_MAIN_DATA = {
   meta: {
-    title: "Information Technology | KIET University, Delhi-NCR Ghaziabad",
-    description: "Department of Information Technology at KIET University offers a comprehensive curriculum in IT, Quantum Computing, AWS Cloud, AI, ML, and Data Engineering. NBA Accredited 5 times with 1.78 Cr highest package.",
-    keywords: "Information Technology,IT Department,KIET IT,B.Tech IT,KIET University,Delhi NCR,Ghaziabad,Quantum Computing,AWS Cloud,AI,ML,Data Engineering,NBA Accredited",
+    title: "KIET Clubs & Events | KIET Group of Institutions, Delhi-NCR Ghaziabad",
+    description: "Explore the vibrant student-led clubs, cultural events, technical societies, and extracurricular activities at KIET Group of Institutions (KIET University), Delhi-NCR Ghaziabad.",
+    keywords: "KIET Clubs, KIET Events, Student Clubs, Cultural Clubs, Technical Clubs, KIET Group of Institutions, KIET University, Delhi NCR, Ghaziabad, Student Societies, Extracurricular Activities",
     bodyClass: "__variable_2b503c __variable_b52d4f",
     stylesheets: [
       "/legacy_next/static/css/2bf75a9330efbc39.css",

@@ -1,0 +1,253 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #fff;
+}
+
+.title {
+  font-family: var(--font-bebas-neue), "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 4.5rem;
+  color: #000;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-size: 1.15rem;
+  color: #4b5563;
+  max-width: 720px;
+  line-height: 1.6;
+  margin-bottom: 3.5rem;
+}
+
+/* Controls Row */
+.controlsRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.searchWrapper {
+  position: relative;
+  flex: 1;
+  max-width: 400px;
+  min-width: 290px;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #1f2937;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.8rem 1rem 0.8rem 2.75rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 2px;
+  background-color: #f9fafb;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  color: #000;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #000;
+  background-color: #fff;
+}
+
+.searchInput::placeholder {
+  color: #9ca3af;
+}
+
+.filterGroup {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.filterButton {
+  background: #fff;
+  border: 1.5px solid #d1d5db;
+  color: #000;
+  padding: 0.6rem 1.25rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  letter-spacing: 0.05em;
+  border-radius: 2px;
+}
+
+.filterButton:hover {
+  background-color: #f9fafb;
+  border-color: #000;
+}
+
+.filterButtonActive {
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+.filterButtonActive:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Grid & Cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 2.25rem;
+  margin-bottom: 4rem;
+}
+
+.card {
+  background-color: #fff;
+  border: 2px solid #000;
+  box-shadow: 6px 6px 0px #000;
+  padding: 2.25rem 2rem 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 290px;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 2px;
+}
+
+.card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 9px 9px 0px #000;
+}
+
+.iconBox {
+  background-color: #000;
+  color: #fff;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.75rem;
+  border-radius: 2px;
+}
+
+.cardTitle {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #000;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+.cardDescription {
+  font-size: 0.95rem;
+  color: #374151;
+  line-height: 1.65;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+  text-align: left;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #f3f4f6;
+  padding-top: 1.25rem;
+  margin-top: auto;
+}
+
+.cardCategory {
+  font-size: 0.8rem;
+  color: #6b7280;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.exploreLink {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #000;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition: transform 0.15s ease;
+}
+
+.exploreLink:hover {
+  transform: translateX(2px);
+}
+
+/* Load More Section */
+.loadMoreWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.loadMoreButton {
+  background-color: #fff;
+  border: 1.5px solid #000;
+  color: #000;
+  padding: 0.8rem 2.25rem;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+  border-radius: 2px;
+}
+
+.loadMoreButton:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+@media (max-width: 991px) {
+  .title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 2.5rem 1rem;
+  }
+  .title {
+    font-size: 2.25rem;
+  }
+  .controlsRow {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.25rem;
+  }
+  .searchWrapper {
+    max-width: 100%;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+}

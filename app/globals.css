@@ -524,3 +524,9 @@ html {
 .kiet-cursor-pointer { cursor: pointer; }
 .kiet-imp-links-header-border { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1.5rem; border-bottom: 2px solid var(--kiet-secondary); }
 .kiet-syllabus-arrow { font-size: 1.2rem; }
+
+.bebas-neue-regular {
+  font-family: var(--font-bebas-neue), "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}

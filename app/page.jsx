@@ -1,5 +1,5 @@
-import { DepartmentMainPage } from "@/app/components/DepartmentMainPage";
-import { IT_MAIN_DATA } from "@/app/data/it-main";
+import CampusLife from './campus-life/page'
+import { IT_MAIN_DATA } from "./data/it-main";
 
 export const metadata = {
   title: IT_MAIN_DATA.meta.title,
@@ -16,7 +16,7 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <DepartmentMainPage
+    <CampusLife
       bodyClass={IT_MAIN_DATA.meta.bodyClass}
       stylesheets={IT_MAIN_DATA.meta.stylesheets}
       fontPreloads={IT_MAIN_DATA.meta.fontPreloads}

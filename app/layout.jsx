@@ -1,14 +1,21 @@
+import { Bebas_Neue } from "next/font/google";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/kiet-theme.scss";
 import "./globals.css";
 
+const bebasNeue = Bebas_Neue({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-bebas-neue",
+});
+
 export const metadata = {
   metadataBase: new URL("https://www.kiet.edu"),
   title: {
-    default: "KIET University",
-    template: "%s | KIET University",
+    default: "KIET Clubs & Events",
+    template: "%s | KIET Clubs & Events",
   },
-  description: "Department of Information Technology at KIET University, Delhi-NCR Ghaziabad.",
+  description: "Stay updated with the latest student-led clubs, cultural events, technical societies, and extracurricular activities at KIET Group of Institutions.",
   icons: {
     icon: "/favicon.ico",
   },
@@ -16,7 +23,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={bebasNeue.variable}>
       <body>{children}</body>
     </html>
   );
