@@ -251,3 +251,89 @@
     gap: 1.75rem;
   }
 }
+
+/* Type Switcher styles */
+.typeSwitcher {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  border-bottom: 2px solid #000;
+  padding-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.typeButton {
+  font-family: var(--font-bebas-neue), "Bebas Neue", sans-serif;
+  font-size: 2.25rem;
+  background: none;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  position: relative;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.typeButton:hover {
+  color: #000;
+}
+
+.typeButtonActive {
+  color: #000;
+}
+
+.typeButtonActive::after {
+  content: "";
+  position: absolute;
+  bottom: -1.45rem;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #000;
+}
+
+.typeBadge {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 800;
+  background-color: #f3f4f6;
+  color: #4b5563;
+  padding: 0.15rem 0.6rem;
+  margin-left: 0.75rem;
+  border-radius: 2px;
+  border: 1.5px solid #d1d5db;
+  display: inline-block;
+  line-height: 1;
+}
+
+.typeButtonActive .typeBadge {
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+@media (max-width: 768px) {
+  .typeSwitcher {
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+  }
+  .typeButton {
+    font-size: 1.6rem;
+  }
+  .typeButtonActive::after {
+    bottom: -1.2rem;
+    height: 3px;
+  }
+  .typeBadge {
+    font-size: 0.75rem;
+    padding: 0.1rem 0.4rem;
+    margin-left: 0.5rem;
+  }
+}
+

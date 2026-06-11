@@ -1,13 +1,9 @@
-
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
-
-import BackToTop from "../components/BackToTop";
-import ImportantLinks from "../components/ImportantLinks";
-
-
-import { IT_MAIN_DATA } from "../data/it-main";
-import ClubCard from "../components/card";
+import Navbar from '../../components/Navbar'
+import Footer from '../../components/Footer'
+import BackToTop from "../../components/BackToTop";
+import ImportantLinks from "../../components/ImportantLinks";
+import { IT_MAIN_DATA } from "../../data/it-main";
+import { ClubsList } from "../../components/ClubsList";
 
 function HeadAssets({ stylesheets, fontPreloads }) {
     return (
@@ -45,41 +41,13 @@ function FloatingWidgets() {
     );
 }
 
-
-const Technical = {
-    name: "Technical Clubs",
-    slug: "technical",
-    category: "campus-life",
-    type: "Technical",
-    image: "/assets/technical.png",
-    description: "Explore innovation, coding, robotics and technical societies.",
-};
-
-const Cultural = {
-    name: "Cultural Clubs",
-    slug: "cultural",
-    category: "campus-life",
-    type: "Cultural",
-    image: "/assets/cultural.png",
-    description: "Unleash creativity through music, dance, drama and literature.",
-};
-
-export default function CampusLife() {
+export default function TechnicalClubsPage() {
     return (
         <>
             <HeadAssets stylesheets={IT_MAIN_DATA.meta.stylesheets} fontPreloads={IT_MAIN_DATA.meta.fontPreloads} />
             <div className={`${IT_MAIN_DATA.meta.bodyClass} kiet-page-scope`}>
                 <Navbar />
-                <div className="container py-5 my-4">
-                    <div className="row g-4 justify-content-center">
-                        <div className="col-12 col-md-6 col-lg-5 d-flex">
-                            <ClubCard club={Technical} />
-                        </div>
-                        <div className="col-12 col-md-6 col-lg-5 d-flex">
-                            <ClubCard club={Cultural} />
-                        </div>
-                    </div>
-                </div>
+                <ClubsList defaultType="technical" hideSwitcher={true} />
                 <Footer />
                 <FloatingWidgets />
                 <ImportantLinks />
@@ -88,4 +56,3 @@ export default function CampusLife() {
         </>
     );
 }
-
