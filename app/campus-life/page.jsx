@@ -52,7 +52,7 @@ const Technical = {
     category: "campus-life",
     type: "Technical",
     image: "/assets/technical.png",
-    description: "Explore innovation, coding, robotics and technical societies.",
+    description: "Build skills through coding, robotics, innovation, and real-world projects.",
 };
 
 const Cultural = {
@@ -61,7 +61,7 @@ const Cultural = {
     category: "campus-life",
     type: "Cultural",
     image: "/assets/cultural.png",
-    description: "Unleash creativity through music, dance, drama and literature.",
+    description: "Express your creativity through music, dance, drama, art, and literature.",
 };
 
 export default function CampusLife() {

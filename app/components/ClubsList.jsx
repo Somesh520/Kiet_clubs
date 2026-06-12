@@ -1,96 +1,67 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styles from "./ClubsList.module.css";
-import { CLUBS_DATA } from "../data/clubs-data";
+import { CLUBS_DATA as TECHNICAL_DATA } from "../data/technical_club_data";
+import { CLUBS_DATA as CULTURAL_DATA } from "../data/cultural_club_data";
 
-// Icon Helper Component to render SVGs inline
-function ClubIcon({ type }) {
-  switch (type) {
-    case "robot":
-      return (
-        <svg stroke="currentColor" fill="none" strokeWidth="2.5" viewBox="0 0 24 24" height="22" width="22">
-          <path d="M12 2v4M5 12h14M12 12v6M9 16h6" />
-          <path d="M19 8H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2z" />
-          <circle cx="8.5" cy="13.5" r="1.5" fill="currentColor" />
-          <circle cx="15.5" cy="13.5" r="1.5" fill="currentColor" />
-        </svg>
-      );
-    case "shield":
-      return (
-        <svg stroke="currentColor" fill="none" strokeWidth="2.5" viewBox="0 0 24 24" height="22" width="22">
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-        </svg>
-      );
-    case "code":
-      return (
-        <svg stroke="currentColor" fill="none" strokeWidth="2.5" viewBox="0 0 24 24" height="22" width="22">
-          <polyline points="16 18 22 12 16 6" />
-          <polyline points="8 6 2 12 8 18" />
-        </svg>
-      );
-    case "design":
-      return (
-        <svg stroke="currentColor" fill="none" strokeWidth="2.5" viewBox="0 0 24 24" height="22" width="22">
-          <path d="M12 22C17.52 22 22 17.52 22 12S17.52 2 12 2 2 6.48 2 12s4.48 10 10 10z" />
-          <circle cx="7.5" cy="10.5" r="1.5" fill="currentColor" />
-          <circle cx="11.5" cy="7.5" r="1.5" fill="currentColor" />
-          <circle cx="16.5" cy="9.5" r="1.5" fill="currentColor" />
-        </svg>
-      );
-    case "lock":
-      return (
-        <svg stroke="currentColor" fill="none" strokeWidth="2.5" viewBox="0 0 24 24" height="22" width="22">
-          <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-          <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-        </svg>
-      );
-    case "music":
-      return (
-        <svg stroke="currentColor" fill="none" strokeWidth="2.5" viewBox="0 0 24 24" height="22" width="22">
-          <path d="M9 18V5l12-2v13" />
-          <circle cx="6.5" cy="18.5" r="2.5" fill="currentColor" />
-          <circle cx="18.5" cy="16.5" r="2.5" fill="currentColor" />
-        </svg>
-      );
-    case "dance":
-      return (
-        <svg stroke="currentColor" fill="none" strokeWidth="2.5" viewBox="0 0 24 24" height="22" width="22">
-          <path d="M12 2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z" />
-          <path d="M9 10H5v3M15 10h4v3M9 10l3 3 3-3M12 13v4l-3 4M12 17l3 4" />
-        </svg>
-      );
-    case "theater":
-      return (
-        <svg stroke="currentColor" fill="none" strokeWidth="2.5" viewBox="0 0 24 24" height="22" width="22">
-          <path d="M2 10s3-3 10-3 10 3 10 3-3 8-10 8-10-8-10-8z" />
-          <circle cx="8" cy="10" r="1.5" fill="currentColor" />
-          <circle cx="16" cy="10" r="1.5" fill="currentColor" />
-          <path d="M10 14h4" />
-        </svg>
-      );
-    case "camera":
-      return (
-        <svg stroke="currentColor" fill="none" strokeWidth="2.5" viewBox="0 0 24 24" height="22" width="22">
-          <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
-          <circle cx="12" cy="13" r="4" />
-        </svg>
-      );
-    case "book":
-      return (
-        <svg stroke="currentColor" fill="none" strokeWidth="2.5" viewBox="0 0 24 24" height="22" width="22">
-          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
-          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
-        </svg>
-      );
-    default:
-      return (
-        <svg stroke="currentColor" fill="none" strokeWidth="2.5" viewBox="0 0 24 24" height="22" width="22">
-          <circle cx="12" cy="12" r="10" />
-          <path d="M8 12h8M12 8v8" />
-        </svg>
-      );
-  }
+const CLUBS_DATA = {
+  technical: TECHNICAL_DATA.technical,
+  cultural: CULTURAL_DATA.cultural
+};
+
+function ClubCardItem({ club }) {
+  const [imgError, setImgError] = useState(false);
+
+  return (
+    <div className={styles.card} data-category={club.category.toLowerCase()}>
+      {/* Terminal Window Header Decor */}
+      <div className={styles.cardHeader}>
+        <div className={styles.windowDots}>
+          <span className={styles.windowDot}></span>
+          <span className={styles.windowDot}></span>
+          <span className={styles.windowDot}></span>
+        </div>
+        <span className={styles.windowTitle}>
+          {club.category} // #{String(club.id).padStart(2, "0")}
+        </span>
+      </div>
+
+      {/* Side-by-Side Hero (Logo + Title) */}
+      <div className={styles.cardHero}>
+        <div className={styles.logoBox}>
+          {imgError || !club.logo ? (
+            <div className={styles.logoFallback}>
+              {club.name.charAt(0).toUpperCase()}
+            </div>
+          ) : (
+            <img
+              src={club.logo}
+              alt={`${club.name} Logo`}
+              onError={() => setImgError(true)}
+              className={styles.clubLogo}
+            />
+          )}
+        </div>
+        <div className={styles.titleWrapper}>
+          <h3 className={styles.cardTitle}>{club.name}</h3>
+          <span className={styles.cardCategory}>{club.category}</span>
+        </div>
+      </div>
+
+      <p className={styles.cardDescription}>{club.description}</p>
+
+      <div className={styles.cardFooter}>
+        <a href={club.exploreUrl} className={styles.exploreButton}>
+          <span>Explore Club</span>
+          <svg stroke="currentColor" fill="none" strokeWidth="2.5" viewBox="0 0 24 24" height="14" width="14" className={styles.arrowIcon}>
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <polyline points="12 5 19 12 12 19" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  );
 }
 
 export function ClubsList({ defaultType = "technical", hideSwitcher = false }) {
@@ -100,6 +71,14 @@ export function ClubsList({ defaultType = "technical", hideSwitcher = false }) {
   const [visibleCount, setVisibleCount] = useState(6);
 
   const activeData = CLUBS_DATA[activeType];
+
+  // Helper to compute category club counts dynamically
+  const getCategoryCount = (category) => {
+    if (category === "ALL") {
+      return activeData.clubs.length;
+    }
+    return activeData.clubs.filter((club) => club.category === category).length;
+  };
 
   // Filter logic
   const filteredClubs = activeData.clubs.filter((club) => {
@@ -116,10 +95,6 @@ export function ClubsList({ defaultType = "technical", hideSwitcher = false }) {
 
   const hasMore = visibleCount < filteredClubs.length;
 
-  const handleLoadMore = () => {
-    setVisibleCount((prev) => prev + 3);
-  };
-
   const handleCategoryChange = (category) => {
     setActiveCategory(category);
     setVisibleCount(6); // Reset visible count on category change
@@ -132,15 +107,46 @@ export function ClubsList({ defaultType = "technical", hideSwitcher = false }) {
     setVisibleCount(6);
   };
 
+  // Infinite Scroll IntersectionObserver implementation
+  const sentinelRef = useRef(null);
+
+  useEffect(() => {
+    if (!hasMore) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        if (entry.isIntersecting) {
+          setVisibleCount((prev) => prev + 6);
+        }
+      },
+      {
+        root: null,
+        rootMargin: "200px", // Trigger loading slightly early before reaching viewport edge
+        threshold: 0.1,
+      }
+    );
+
+    const currentSentinel = sentinelRef.current;
+    if (currentSentinel) {
+      observer.observe(currentSentinel);
+    }
+
+    return () => {
+      if (currentSentinel) {
+        observer.unobserve(currentSentinel);
+      }
+    };
+  }, [hasMore, visibleCount, filteredClubs.length]);
+
   return (
     <div className={styles.container}>
       {/* Type Switcher */}
       {!hideSwitcher && (
         <div className={styles.typeSwitcher}>
           <button
-            className={`${styles.typeButton} ${
-              activeType === "technical" ? styles.typeButtonActive : ""
-            }`}
+            className={`${styles.typeButton} ${activeType === "technical" ? styles.typeButtonActive : ""
+              }`}
             onClick={() => handleTypeChange("technical")}
           >
             Technical Clubs
@@ -149,9 +155,8 @@ export function ClubsList({ defaultType = "technical", hideSwitcher = false }) {
             </span>
           </button>
           <button
-            className={`${styles.typeButton} ${
-              activeType === "cultural" ? styles.typeButtonActive : ""
-            }`}
+            className={`${styles.typeButton} ${activeType === "cultural" ? styles.typeButtonActive : ""
+              }`}
             onClick={() => handleTypeChange("cultural")}
           >
             Cultural Clubs
@@ -168,12 +173,10 @@ export function ClubsList({ defaultType = "technical", hideSwitcher = false }) {
       {/* Controls: Search and Filter Buttons */}
       <div className={styles.controlsRow}>
         <div className={styles.searchWrapper}>
-          <span className={styles.searchIcon}>
-            <svg stroke="currentColor" fill="none" strokeWidth="2.5" viewBox="0 0 24 24" height="18" width="18">
-              <circle cx="11" cy="11" r="8" />
-              <line x1="21" y1="21" x2="16.65" y2="16.65" />
-            </svg>
-          </span>
+          <svg stroke="currentColor" fill="none" strokeWidth="2.5" viewBox="0 0 24 24" className={styles.searchIcon} height="18" width="18">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
           <input
             type="text"
             className={styles.searchInput}
@@ -181,20 +184,31 @@ export function ClubsList({ defaultType = "technical", hideSwitcher = false }) {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
+          {searchQuery && (
+            <button
+              className={styles.clearSearchBtn}
+              onClick={() => setSearchQuery("")}
+              aria-label="Clear search"
+            >
+              ✕
+            </button>
+          )}
         </div>
 
         <div className={styles.filterGroup}>
-          {activeData.categories.map((category) => (
-            <button
-              key={category}
-              className={`${styles.filterButton} ${
-                activeCategory === category ? styles.filterButtonActive : ""
-              }`}
-              onClick={() => handleCategoryChange(category)}
-            >
-              {category}
-            </button>
-          ))}
+          {activeData.categories.map((category) => {
+            const count = getCategoryCount(category);
+            return (
+              <button
+                key={category}
+                className={`${styles.filterButton} ${activeCategory === category ? styles.filterButtonActive : ""
+                  }`}
+                onClick={() => handleCategoryChange(category)}
+              >
+                {category} <span className={styles.filterBadge}>{count}</span>
+              </button>
+            );
+          })}
         </div>
       </div>
 
@@ -202,23 +216,7 @@ export function ClubsList({ defaultType = "technical", hideSwitcher = false }) {
       {filteredClubs.length > 0 ? (
         <div className={styles.grid}>
           {filteredClubs.slice(0, visibleCount).map((club) => (
-            <div key={club.id} className={styles.card} data-category={club.category.toLowerCase()}>
-              <div className={styles.iconBox}>
-                <ClubIcon type={club.iconType} />
-              </div>
-              <h3 className={styles.cardTitle}>{club.name}</h3>
-              <p className={styles.cardDescription}>{club.description}</p>
-              <div className={styles.cardFooter}>
-                <span className={styles.cardCategory}>{club.category}</span>
-                <a href={club.exploreUrl} className={styles.exploreLink}>
-                  Explore
-                  <svg stroke="currentColor" fill="none" strokeWidth="2.5" viewBox="0 0 24 24" height="14" width="14">
-                    <line x1="5" y1="12" x2="19" y2="12" />
-                    <polyline points="12 5 19 12 12 19" />
-                  </svg>
-                </a>
-              </div>
-            </div>
+            <ClubCardItem key={club.id} club={club} />
           ))}
         </div>
       ) : (
@@ -227,15 +225,15 @@ export function ClubsList({ defaultType = "technical", hideSwitcher = false }) {
         </div>
       )}
 
-      {/* Load More Button */}
+      {/* Infinite Scroll Sentinel / Loading Indicator */}
       {hasMore && (
-        <div className={styles.loadMoreWrapper}>
-          <button className={styles.loadMoreButton} onClick={handleLoadMore}>
-            Load More Clubs
-            <svg stroke="currentColor" fill="none" strokeWidth="2.5" viewBox="0 0 24 24" height="16" width="16">
-              <polyline points="6 9 12 15 18 9" />
-            </svg>
-          </button>
+        <div ref={sentinelRef} className={styles.loaderWrapper}>
+          <div className={styles.pulseLoader}>
+            <span className={styles.pulseDot}></span>
+            <span className={styles.pulseDot}></span>
+            <span className={styles.pulseDot}></span>
+          </div>
+          <p className={styles.loaderText}>LOADING MORE CLUBS...</p>
         </div>
       )}
     </div>

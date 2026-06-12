@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap');
+
 .cardLink {
   display: flex;
   flex-direction: column;
@@ -53,33 +55,35 @@
   display: inline-block;
   align-self: flex-start;
   border: 2px solid #000;
-  background-color: #ffe600; /* vibrant yellow */
+  background-color: #ffe600;
   color: #000;
+  font-family: 'Inter', sans-serif;
   font-size: 0.75rem;
-  font-weight: 900;
+  font-weight: 800;
   text-transform: uppercase;
   padding: 0.3rem 0.8rem;
   margin-bottom: 1rem;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   border-radius: 2px;
 }
 
 .title {
-  font-family: var(--font-bebas-neue), "Bebas Neue", sans-serif;
-  font-size: 2.25rem;
+  font-family: 'Anton', sans-serif;
+  font-size: 2.3rem;
   font-weight: 400;
   text-transform: uppercase;
-  line-height: 1.1;
+  line-height: 1.05;
   color: #000;
-  margin-bottom: 0.75rem;
-  letter-spacing: 0.02em;
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.03em;
 }
 
 .description {
-  font-size: 0.95rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.15rem;
   font-weight: 500;
   color: #4b5563;
-  line-height: 1.6;
+  line-height: 1.7;
   margin-bottom: 1.5rem;
   flex-grow: 1;
 }
@@ -94,11 +98,12 @@
 }
 
 .footerText {
+  font-family: 'Inter', sans-serif;
   font-size: 0.85rem;
   font-weight: 800;
   text-transform: uppercase;
   color: #000;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
 }
 
 .arrowBtn {
@@ -106,8 +111,9 @@
   background-color: #000;
   color: #fff;
   padding: 0.4rem 1rem;
+  font-family: 'Inter', sans-serif;
   font-weight: 900;
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   transition: all 0.2s ease;
   display: flex;
   align-items: center;
