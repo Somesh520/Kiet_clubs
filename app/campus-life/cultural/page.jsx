@@ -1,9 +1,12 @@
+"use client";
+
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import BackToTop from "../../components/BackToTop";
 import ImportantLinks from "../../components/ImportantLinks";
 import { IT_MAIN_DATA } from "../../data/it-main";
 import { ClubsList } from "../../components/ClubsList";
+import { motion } from "framer-motion";
 
 function HeadAssets({ stylesheets, fontPreloads }) {
     return (
@@ -18,6 +21,7 @@ function HeadAssets({ stylesheets, fontPreloads }) {
     );
 }
 
+// WhatsApp icon + Admission Floating widgets
 function FloatingWidgets() {
     return (
         <>
@@ -47,7 +51,13 @@ export default function CulturalClubsPage() {
             <HeadAssets stylesheets={IT_MAIN_DATA.meta.stylesheets} fontPreloads={IT_MAIN_DATA.meta.fontPreloads} />
             <div className={`${IT_MAIN_DATA.meta.bodyClass} kiet-page-scope`}>
                 <Navbar />
-                <ClubsList defaultType="cultural" hideSwitcher={true} />
+                <motion.div
+                    initial={{ opacity: 0, y: 15 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                >
+                    <ClubsList defaultType="cultural" hideSwitcher={true} />
+                </motion.div>
                 <Footer />
                 <FloatingWidgets />
                 <ImportantLinks />

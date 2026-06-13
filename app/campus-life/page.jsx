@@ -1,10 +1,12 @@
 
+"use client";
+
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
 import BackToTop from "../components/BackToTop";
 import ImportantLinks from "../components/ImportantLinks";
-
+import { motion } from "framer-motion";
 
 import { IT_MAIN_DATA } from "../data/it-main";
 import ClubCard from "../components/card";
@@ -70,7 +72,12 @@ export default function CampusLife() {
             <HeadAssets stylesheets={IT_MAIN_DATA.meta.stylesheets} fontPreloads={IT_MAIN_DATA.meta.fontPreloads} />
             <div className={`${IT_MAIN_DATA.meta.bodyClass} kiet-page-scope`}>
                 <Navbar />
-                <div className="container py-5 my-4">
+                <motion.div
+                    initial={{ opacity: 0, y: 15 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                    className="container py-5 my-4"
+                >
                     <div className="row g-4 justify-content-center">
                         <div className="col-12 col-md-6 col-lg-5 d-flex">
                             <ClubCard club={Technical} />
@@ -79,7 +86,7 @@ export default function CampusLife() {
                             <ClubCard club={Cultural} />
                         </div>
                     </div>
-                </div>
+                </motion.div>
                 <Footer />
                 <FloatingWidgets />
                 <ImportantLinks />
