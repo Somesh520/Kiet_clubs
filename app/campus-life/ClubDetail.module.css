@@ -602,3 +602,65 @@
   margin: 0;
 }
 
+/* ─── Events Grid ─── */
+.eventsSection {
+  margin-bottom: 6rem;
+}
+
+.eventsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.eventCard {
+  background-color: #fff;
+  border: 3px solid #000;
+  box-shadow: 6px 6px 0px var(--accent-color);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.eventCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 10px 10px 0px #000;
+}
+
+.eventDate {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.25rem;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.75rem;
+  border-radius: 2px;
+  margin-bottom: 1rem;
+}
+
+.eventTitle {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #000;
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+
+.eventDesc {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #333;
+  margin: 0;
+}
+
+.leaderEmail {
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 0.15rem;
+  font-weight: 500;
+  word-break: break-all;
+}
+

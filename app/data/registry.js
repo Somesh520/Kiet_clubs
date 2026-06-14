@@ -102,7 +102,8 @@ const getClubFacultyCoordinator = (club) => {
       return {
         name: t.name || "",
         role: t.role || "Faculty Coordinator",
-        img: t.img || ""
+        img: t.img || "",
+        email: t.email || ""
       };
     });
   }

@@ -260,6 +260,9 @@ export default function TechnicalClubDetailPage() {
                       <div className={styles.leaderInfo}>
                         <span className={styles.leaderRole}>{teacher.role}</span>
                         <h4 className={styles.leaderName}>{teacher.name}</h4>
+                        {teacher.email && (
+                          <span className={styles.leaderEmail}>{teacher.email}</span>
+                        )}
                       </div>
                     </div>
                   ))}
@@ -298,15 +301,34 @@ export default function TechnicalClubDetailPage() {
 
         {/* Events Tab Content */}
         {activeTab === "Events" && (
-          <section className={styles.placeholderSection}>
-            <div className={styles.placeholderCard}>
-              <div className={styles.placeholderIcon}>📅</div>
-              <h3 className={styles.placeholderTitle}>Stay Tuned for Upcoming Events</h3>
-              <p className={styles.placeholderDesc}>
-                We are mapping out our schedule for the upcoming semester. Check back soon for workshops, hands-on hackathons, and guest lectures!
-              </p>
-            </div>
-          </section>
+          club.events && club.events.length > 0 ? (
+            <section className={styles.eventsSection}>
+              <h2 className={styles.sectionHeading}>Club Events</h2>
+              <div className={styles.eventsGrid}>
+                {club.events.map((evt, idx) => (
+                  <div key={idx} className={styles.eventCard}>
+                    {evt.date && (
+                      <div className={styles.eventDate}>
+                        <span>{evt.date}</span>
+                      </div>
+                    )}
+                    <h4 className={styles.eventTitle}>{evt.title}</h4>
+                    <p className={styles.eventDesc}>{evt.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+          ) : (
+            <section className={styles.placeholderSection}>
+              <div className={styles.placeholderCard}>
+                <div className={styles.placeholderIcon}>📅</div>
+                <h3 className={styles.placeholderTitle}>Stay Tuned for Upcoming Events</h3>
+                <p className={styles.placeholderDesc}>
+                  We are mapping out our schedule for the upcoming semester. Check back soon for workshops, hands-on hackathons, and guest lectures!
+                </p>
+              </div>
+            </section>
+          )
         )}
 
         {/* Achievements Tab Content */}
@@ -317,9 +339,11 @@ export default function TechnicalClubDetailPage() {
               <div className={styles.achievementsGrid}>
                 {club.achievements.map((ach, idx) => (
                   <div key={idx} className={styles.achievementCard}>
-                    <div className={styles.achievementYear}>
-                      <span>{ach.year}</span>
-                    </div>
+                    {ach.year && (
+                      <div className={styles.achievementYear}>
+                        <span>{ach.year}</span>
+                      </div>
+                    )}
                     <h4 className={styles.achievementTitle}>{ach.title}</h4>
                     <p className={styles.achievementDesc}>{ach.desc}</p>
                   </div>

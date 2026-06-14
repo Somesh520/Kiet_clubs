@@ -12,7 +12,14 @@
     {
       "name": "Dr. Ranchay Bhateja",
       "role": "Faculty Coordinator",
-      "img": ""
+      "img": "",
+      "email": "ranchay.bhateja@kiet.edu"
+    },
+    {
+      "name": "Ms. Shweta Singh",
+      "role": "Faculty Coordinator",
+      "img": "",
+      "email": "shweta.singh@kiet.edu"
     }
   ],
   "studentLeaders": [
@@ -42,5 +49,32 @@
       "img": ""
     }
   ],
-  "achievements": []
+  "achievements": [
+    {
+      "title": "Module Integration",
+      "desc": "Successfully integrated cultural modules into the college's major fests."
+    },
+    {
+      "title": "Digital Repository",
+      "desc": "Built a digital repository of resources for students to learn about the Northeast Indian lifestyle."
+    },
+    {
+      "title": "Student Engagement",
+      "desc": "Maintained a consistent engagement rate of 70% among the student body through awareness campaigns."
+    }
+  ],
+  "events": [
+    {
+      "title": "Cultural Fusion Workshop",
+      "desc": "An interactive session demonstrating the traditional art forms and attire of the \"Land of the Rising Sun\" (Arunachal) and the \"Abode of Clouds\" (Meghalaya)."
+    },
+    {
+      "title": "Bhasha Sangram",
+      "desc": "A language-learning initiative where students are taught basic greetings and phrases in Khasi, Garo, and Arunachali dialects."
+    },
+    {
+      "title": "EBSB Monthly Debate/Quiz",
+      "desc": "Focused on the history and contributions of our paired states to the Indian identity."
+    }
+  ]
 }
