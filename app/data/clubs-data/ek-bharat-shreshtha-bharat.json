@@ -15,6 +15,32 @@
       "img": ""
     }
   ],
-  "studentLeaders": [],
+  "studentLeaders": [
+    {
+      "name": "Hemank Kumar",
+      "role": "President",
+      "img": ""
+    },
+    {
+      "name": "Ashutosh Singh",
+      "role": "Vice President",
+      "img": ""
+    },
+    {
+      "name": "Shashank Jaiwal",
+      "role": "Member",
+      "img": ""
+    },
+    {
+      "name": "Tejas Pathak",
+      "role": "Member",
+      "img": ""
+    },
+    {
+      "name": "Alka Singh",
+      "role": "Member",
+      "img": ""
+    }
+  ],
   "achievements": []
 }

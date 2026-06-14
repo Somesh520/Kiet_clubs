@@ -99,81 +99,7 @@ const getCategoryFeatures = (category) => {
   }
 };
 
-// Neobrutalist Mock Core Leaders
-const getMockLeaders = (category) => {
-  const normalized = (category || "").toUpperCase();
-  const baseImages = [
-    "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80",
-    "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80",
-    "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=80",
-    "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=500&q=80"
-  ];
 
-  if (normalized === "CODING" || normalized === "CYBERSECURITY") {
-    return [
-      { name: "Aarav Sharma", role: "Lead Coordinator", img: baseImages[0] },
-      { name: "Ananya Iyer", role: "Technical Head", img: baseImages[1] },
-      { name: "Kabir Verma", role: "DevOps Lead", img: baseImages[2] },
-      { name: "Riya Sen", role: "UI/UX Coordinator", img: baseImages[3] }
-    ];
-  } else if (normalized === "ROBOTICS" || normalized === "INNOVATION") {
-    return [
-      { name: "Ishaan Goel", role: "Lead Coordinator", img: baseImages[0] },
-      { name: "Meera Nair", role: "Hardware Head", img: baseImages[1] },
-      { name: "Aditya Roy", role: "Embedded Systems Lead", img: baseImages[2] },
-      { name: "Tara Kapoor", role: "CAD Designer", img: baseImages[3] }
-    ];
-  } else if (normalized === "DESIGN") {
-    return [
-      { name: "Rohan Das", role: "Lead Coordinator", img: baseImages[0] },
-      { name: "Siya Mehra", role: "Product Design Head", img: baseImages[1] },
-      { name: "Devansh Gupta", role: "Brand Lead", img: baseImages[2] },
-      { name: "Nisha Patel", role: "Motion Design Head", img: baseImages[3] }
-    ];
-  } else if (normalized === "MUSIC") {
-    return [
-      { name: "Aryan Kapoor", role: "Band Coordinator", img: baseImages[0] },
-      { name: "Shreya Ghoshal", role: "Lead Vocalist", img: baseImages[1] },
-      { name: "Neil D'Souza", role: "Instrumental Head", img: baseImages[2] },
-      { name: "Pooja Hegde", role: "Production Coordinator", img: baseImages[3] }
-    ];
-  } else if (normalized === "DANCE") {
-    return [
-      { name: "Varun Dhawan", role: "Crew Lead", img: baseImages[0] },
-      { name: "Natasha Dalal", role: "Contemporary Head", img: baseImages[1] },
-      { name: "Hrithik Roshan", role: "Hip-Hop Choreographer", img: baseImages[2] },
-      { name: "Kiara Advani", role: "Classical Lead", img: baseImages[3] }
-    ];
-  } else if (normalized === "DRAMATICS") {
-    return [
-      { name: "Rajkummar Rao", role: "Stage Director", img: baseImages[0] },
-      { name: "Alia Bhatt", role: "Lead Actress", img: baseImages[1] },
-      { name: "Vicky Kaushal", role: "Scriptwriter Head", img: baseImages[2] },
-      { name: "Kriti Sanon", role: "Production Manager", img: baseImages[3] }
-    ];
-  } else if (normalized === "PHOTOGRAPHY") {
-    return [
-      { name: "Ranbir Kapoor", role: "Director of Photography", img: baseImages[0] },
-      { name: "Katrina Kaif", role: "Chief Editor", img: baseImages[1] },
-      { name: "Siddharth Malhotra", role: "Lighting Tech Lead", img: baseImages[2] },
-      { name: "Shraddha Kapoor", role: "Event Coverage Coordinator", img: baseImages[3] }
-    ];
-  } else if (normalized === "LITERARY") {
-    return [
-      { name: "Shashi Tharoor", role: "Debate President", img: baseImages[0] },
-      { name: "Arundhati Roy", role: "Creative Writing Head", img: baseImages[1] },
-      { name: "Vikram Seth", role: "MUN Coordinator", img: baseImages[2] },
-      { name: "Jhumpa Lahiri", role: "Chief Editor", img: baseImages[3] }
-    ];
-  } else {
-    return [
-      { name: "Aarav Sharma", role: "Lead Coordinator", img: baseImages[0] },
-      { name: "Ananya Iyer", role: "Technical Head", img: baseImages[1] },
-      { name: "Kabir Verma", role: "Operations Lead", img: baseImages[2] },
-      { name: "Riya Sen", role: "PR Coordinator", img: baseImages[3] }
-    ];
-  }
-};
 
 export default function TechnicalClubDetailPage() {
   const params = useParams();
@@ -205,9 +131,7 @@ export default function TechnicalClubDetailPage() {
 
   const colors = getCategoryColors(club.category);
   const features = getCategoryFeatures(club.category);
-  const leaders = club.studentLeaders && club.studentLeaders.length > 0
-    ? club.studentLeaders
-    : getMockLeaders(club.category);
+  const leaders = club.studentLeaders || [];
 
   const backUrl = "/campus-life/technical";
   const coordinator = club.teacherCoordinators && club.teacherCoordinators.length > 0
@@ -323,14 +247,16 @@ export default function TechnicalClubDetailPage() {
                 <div className={styles.leadersGrid}>
                   {club.teacherCoordinators.map((teacher, idx) => (
                     <div key={idx} className={styles.leaderCard}>
-                      <div className={styles.avatarWrapper}>
-                        <img
-                          src={teacher.img || "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&q=80"}
-                          alt={teacher.name}
-                          className={styles.leaderAvatar}
-                          loading="lazy"
-                        />
-                      </div>
+                      {teacher.img && (
+                        <div className={styles.avatarWrapper}>
+                          <img
+                            src={teacher.img}
+                            alt={teacher.name}
+                            className={styles.leaderAvatar}
+                            loading="lazy"
+                          />
+                        </div>
+                      )}
                       <div className={styles.leaderInfo}>
                         <span className={styles.leaderRole}>{teacher.role}</span>
                         <h4 className={styles.leaderName}>{teacher.name}</h4>
@@ -342,27 +268,31 @@ export default function TechnicalClubDetailPage() {
             )}
 
             {/* Leadership Section */}
-            <section className={styles.leadershipSection}>
-              <h2 className={styles.sectionHeading}>Core Leadership</h2>
-              <div className={styles.leadersGrid}>
-                {leaders.map((leader, idx) => (
-                  <div key={idx} className={styles.leaderCard}>
-                    <div className={styles.avatarWrapper}>
-                      <img
-                        src={leader.img}
-                        alt={leader.name}
-                        className={styles.leaderAvatar}
-                        loading="lazy"
-                      />
+            {leaders && leaders.length > 0 && (
+              <section className={styles.leadershipSection}>
+                <h2 className={styles.sectionHeading}>Core Leadership</h2>
+                <div className={styles.leadersGrid}>
+                  {leaders.map((leader, idx) => (
+                    <div key={idx} className={styles.leaderCard}>
+                      {leader.img && (
+                        <div className={styles.avatarWrapper}>
+                          <img
+                            src={leader.img}
+                            alt={leader.name}
+                            className={styles.leaderAvatar}
+                            loading="lazy"
+                          />
+                        </div>
+                      )}
+                      <div className={styles.leaderInfo}>
+                        <span className={styles.leaderRole}>{leader.role}</span>
+                        <h4 className={styles.leaderName}>{leader.name}</h4>
+                      </div>
                     </div>
-                    <div className={styles.leaderInfo}>
-                      <span className={styles.leaderRole}>{leader.role}</span>
-                      <h4 className={styles.leaderName}>{leader.name}</h4>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </section>
+                  ))}
+                </div>
+              </section>
+            )}
           </>
         )}
 
