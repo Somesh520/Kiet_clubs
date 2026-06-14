@@ -1,0 +1,20 @@
+{
+  "id": 120,
+  "name": "Women Outreach Cell",
+  "description": "At Women Outreach Cell, we believe every woman—regardless of her circumstances—deserves the chance to learn, grow, and thrive.\n\nWe work directly with women in rural areas and young girls from underprivileged backgrounds who are unable to afford an education.Through awareness drives, mentorship programs, and skill - building workshops, we inspire them to continue their studies, develop employable skills, and build a path toward financial independence.",
+  "category": "LITERARY",
+  "iconType": "book",
+  "logo": "/clubs/cultural/Women Outreach Cell/WomenOutreachcell.webp",
+  "exploreUrl": "#",
+  "teamName": "",
+  "department": "Cultural Cell",
+  "teacherCoordinators": [
+    {
+      "name": "Dr. Vineet Sharma",
+      "role": "Faculty Coordinator",
+      "img": ""
+    }
+  ],
+  "studentLeaders": [],
+  "achievements": []
+}

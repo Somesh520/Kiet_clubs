@@ -1,0 +1,20 @@
+{
+  "id": 1,
+  "name": "innogeeks.",
+  "description": "Innogeeks, a remarkable joint initiative by both faculty and students, strives to elevate our institution and aligns it with esteemed national and international counterparts. - Focussing on empowering students to excel beyond their academic knowledge, honing their skills for real-world challenges. The club strives to empower students with technical prowess across diverse fields of Technology, preparing them to thrive in a competitive landscape. Our space offers great resources, guidance from seniors, and a mission to ignite the innovator in each individual.",
+  "category": "ROBOTICS",
+  "iconType": "robot",
+  "logo": "/clubs/technical/innogeeks./innogeeks.webp",
+  "exploreUrl": "#",
+  "teamName": "",
+  "department": "CSE",
+  "teacherCoordinators": [
+    {
+      "name": "Dr. Adesh Kumar Pandey",
+      "role": "Faculty Coordinator",
+      "img": "/clubs/technical/innogeeks./Dr.webp"
+    }
+  ],
+  "studentLeaders": [],
+  "achievements": []
+}

@@ -87,7 +87,6 @@
   padding: 0.5rem 1rem;
   border: 3px solid #000;
   box-shadow: 3px 3px 0px #000;
-  margin-bottom: 1.5rem;
   letter-spacing: 0.1em;
 }
 
@@ -394,3 +393,212 @@
   margin: 0;
   letter-spacing: 0.02em;
 }
+
+/* ─── Meta Badges in Header ─── */
+.metaBadgeGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.deptLabel, .teamLabel, .coordinatorLabel {
+  background-color: #fff;
+  color: #000;
+  font-weight: 750;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  border: 3px solid #000;
+  box-shadow: 3px 3px 0px #000;
+  letter-spacing: 0.05em;
+  display: inline-block;
+}
+
+.teamLabel, .coordinatorLabel {
+  background-color: #fff8f5;
+  box-shadow: 3px 3px 0px var(--accent-color);
+}
+
+/* ─── Faculty Section ─── */
+.facultySection {
+  margin-bottom: 6rem;
+}
+
+/* ─── Achievements Timeline Grid ─── */
+.achievementsSection {
+  margin-bottom: 6rem;
+}
+
+.achievementsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.achievementCard {
+  background-color: #fff;
+  border: 3px solid #000;
+  box-shadow: 6px 6px 0px var(--accent-color);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.achievementCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 10px 10px 0px #000;
+}
+
+.achievementYear {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.25rem;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.75rem;
+  border-radius: 2px;
+  margin-bottom: 1rem;
+}
+
+.achievementTitle {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #000;
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+
+.achievementDesc {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #333;
+  margin: 0;
+}
+
+/* Tab Switcher Navigation Styles */
+.tabsContainer {
+  display: flex;
+  gap: 2.5rem;
+  border-bottom: 4px solid #000;
+  margin: 3.5rem 0 3rem 0;
+  padding-bottom: 0;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+}
+
+.tabsContainer::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.tabButton {
+  background: none;
+  border: none;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #666;
+  padding: 0.75rem 0.25rem;
+  cursor: pointer;
+  position: relative;
+  text-transform: none;
+  transition: color 0.15s ease;
+  outline: none;
+}
+
+.tabButton:hover {
+  color: #000;
+}
+
+.activeTab {
+  color: #000;
+}
+
+.activeTab::after {
+  content: '';
+  position: absolute;
+  bottom: -4px; /* Align with container bottom border */
+  left: 0;
+  right: 0;
+  height: 6px;
+  background-color: var(--accent-color);
+  border-left: 2px solid #000;
+  border-right: 2px solid #000;
+  border-top: 2px solid #000;
+}
+
+@media (max-width: 576px) {
+  .tabsContainer {
+    gap: 1.5rem;
+  }
+  .tabButton {
+    font-size: 1.25rem;
+  }
+}
+
+/* Premium Placeholder Card for Events/Empty States */
+.placeholderSection {
+  margin-bottom: 6rem;
+}
+
+.placeholderCard {
+  background-color: #fff;
+  border: 4px solid #000;
+  box-shadow: 8px 8px 0px #000;
+  padding: 4.5rem 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: pointer;
+}
+
+.placeholderCard:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 12px 12px 0px var(--accent-color);
+  background-color: var(--accent-light);
+}
+
+.placeholderIcon {
+  font-size: 3.5rem;
+  background-color: var(--accent-light);
+  border: 3px solid #000;
+  box-shadow: 4px 4px 0px #000;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.placeholderCard:hover .placeholderIcon {
+  transform: rotate(8deg) scale(1.05);
+}
+
+.placeholderTitle {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.5rem;
+  color: #000;
+  margin: 0;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.placeholderDesc {
+  font-size: 1.25rem;
+  font-family: 'Instrument Serif', serif;
+  color: #333;
+  max-width: 520px;
+  line-height: 1.4;
+  margin: 0;
+}
+

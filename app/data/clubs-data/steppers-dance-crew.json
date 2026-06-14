@@ -1,0 +1,20 @@
+{
+  "id": 103,
+  "name": "Steppers Dance Crew",
+  "description": "Welcome to STEPPERS DANCE CLUB, a vibrant community of 27 passionate dancers who share a common love for the art of movement! Our club is a dynamic space where individuals of all levels come together to explore a variety of dance styles, from contemporary and hip-hop to ballroom and salsa.\n\nAt STEPPERS, we believe in the power of dance to inspire, connect, and uplift.Whether you're looking to refine your skills, perform in front of an audience, or simply enjoy the rhythm and energy, you'll find a welcoming and supportive environment here.Our diverse members bring a rich tapestry of experiences and talents, fostering creativity and collaboration.",
+  "category": "DANCE",
+  "iconType": "dance",
+  "logo": "/clubs/cultural/Steppers Dance Crew/SDC.webp",
+  "exploreUrl": "#",
+  "teamName": "",
+  "department": "Cultural Cell",
+  "teacherCoordinators": [
+    {
+      "name": "Prof. Sheetal Singhal",
+      "role": "Faculty Coordinator",
+      "img": ""
+    }
+  ],
+  "studentLeaders": [],
+  "achievements": []
+}

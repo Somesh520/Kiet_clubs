@@ -1,0 +1,20 @@
+{
+  "id": 15,
+  "name": "Google Developer Groups",
+  "description": "The Google Developer Groups (GDG) at KIET, Ghaziabad is a dynamic, student-driven technical community dedicated to empowering learners through hands-on skills, innovation, and real-world problem-solving. Supported by Google Developers, the club provides a platform for students to explore emerging technologies such as web development, Android, cloud computing, machine learning, and AI. It conducts workshops, hackathons, coding sessions, and project-based learning activities to bridge the gap between academic knowledge and industry requirements. GDG KIET encourages collaboration, creativity, and leadership, helping students build strong technical portfolios while contributing to impactful community solutions and preparing them for future technological careers.",
+  "category": "CODING",
+  "iconType": "code",
+  "logo": "/clubs/technical/Google Developer Groups/gdg_kiet.webp",
+  "exploreUrl": "#",
+  "teamName": "",
+  "department": "CSE",
+  "teacherCoordinators": [
+    {
+      "name": "Dr. Vineet Sharma",
+      "role": "Faculty Coordinator",
+      "img": ""
+    }
+  ],
+  "studentLeaders": [],
+  "achievements": []
+}

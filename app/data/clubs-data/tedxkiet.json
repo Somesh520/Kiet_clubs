@@ -1,0 +1,20 @@
+{
+  "id": 118,
+  "name": "TEDxKIET",
+  "description": "TEDxKIET is a student-led initiative licensed by TED, dedicated to bringing eminent personalities and thoughtful leaders from diverse fields to share their ideas worth spreading. The club’s mission is to inspire, ignite conversations, and empower the KIET community through impactful talks and experiences.",
+  "category": "LITERARY",
+  "iconType": "book",
+  "logo": "/clubs/cultural/TEDxKIET/TEDxKIET.webp",
+  "exploreUrl": "#",
+  "teamName": "",
+  "department": "Cultural Cell",
+  "teacherCoordinators": [
+    {
+      "name": "Dr. Vineet Sharma",
+      "role": "Faculty Coordinator",
+      "img": ""
+    }
+  ],
+  "studentLeaders": [],
+  "achievements": []
+}

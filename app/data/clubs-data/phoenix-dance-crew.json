@@ -1,0 +1,20 @@
+{
+  "id": 102,
+  "name": "Phoenix Dance Crew",
+  "description": "Established in 2015, our club has been a vibrant space for young talents to discover, nurture, and express their passion for dance. With the guidance and encouragement of our seniors, we strive not only to refine dance skills but also to shape overall personality development. Our members imbibe values such as punctuality, discipline, leadership, teamwork, and confidence - growing as individuals while building a strong sense of family and community.\n\nWe are dedicated to fostering an inclusive and inspiring environment where creativity thrives, and every member is encouraged to push their boundaries.Through regular performances, workshops, and events, we provide platforms for students to showcase their artistry, dedication, and hard work to larger audiences.More than just a dance club, we are a collective that believes in resilience, collaboration, and continuous growth, shaping well- rounded individuals who shine both on and off the stage.",
+  "category": "DANCE",
+  "iconType": "dance",
+  "logo": "/clubs/cultural/Phoenix Dance Crew/PhoenixDanceCrew.webp",
+  "exploreUrl": "#",
+  "teamName": "",
+  "department": "Cultural Cell",
+  "teacherCoordinators": [
+    {
+      "name": "Prof. Sheetal Singhal",
+      "role": "Faculty Coordinator",
+      "img": ""
+    }
+  ],
+  "studentLeaders": [],
+  "achievements": []
+}

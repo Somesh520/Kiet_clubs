@@ -1,0 +1,20 @@
+{
+  "id": 10,
+  "name": "E-CELL",
+  "description": "The Entrepreneurship Cell. A platform for young minds to pitch startup plans, network with investors, and scale business models.",
+  "category": "INNOVATION",
+  "iconType": "design",
+  "logo": "/clubs/technical/E-CELL/e-cell.webp",
+  "exploreUrl": "#",
+  "teamName": "",
+  "department": "CSE",
+  "teacherCoordinators": [
+    {
+      "name": "Dr. Vineet Sharma",
+      "role": "Faculty Coordinator",
+      "img": ""
+    }
+  ],
+  "studentLeaders": [],
+  "achievements": []
+}

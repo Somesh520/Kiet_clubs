@@ -1,0 +1,20 @@
+{
+  "id": 5,
+  "name": "Kinesis Technical Society",
+  "description": "Kinesis Technical Society (KTS) is the official technical society of KIET, built on the pillars of innovation, collaboration, and continuous learning. KTS provides a dynamic platform for students to explore and excel in various domains of technology. Our society organizes a wide range of activities including technical workshops, hackathons, coding competitions, and project showcases that encourage hands-on learning and creative problem-solving.",
+  "category": "CYBERSECURITY",
+  "iconType": "lock",
+  "logo": "/clubs/technical/Kinesis Technical Society/logo/kts.webp",
+  "exploreUrl": "#",
+  "teamName": "",
+  "department": "CSE",
+  "teacherCoordinators": [
+    {
+      "name": "Dr. Vineet Sharma",
+      "role": "Faculty Coordinator",
+      "img": ""
+    }
+  ],
+  "studentLeaders": [],
+  "achievements": []
+}

@@ -1,0 +1,20 @@
+{
+  "id": 24,
+  "name": "technocrats",
+  "description": "Entitled as 'Technocrats,' originating from the roots aligning along the concept of 'opportunities,' we aim at maneuvering the appreciation of innovation in creation of optimistic significance while building a concrete bridge between opportunistic enrichment and talent, for our belief remarks that no talent shall be left unveiled, unappreciated.",
+  "category": "CODING",
+  "iconType": "code",
+  "logo": "/clubs/technical/technocrats/Technocrats.webp",
+  "exploreUrl": "#",
+  "teamName": "",
+  "department": "CSE",
+  "teacherCoordinators": [
+    {
+      "name": "Dr. Vineet Sharma",
+      "role": "Faculty Coordinator",
+      "img": ""
+    }
+  ],
+  "studentLeaders": [],
+  "achievements": []
+}

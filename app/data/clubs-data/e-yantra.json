@@ -1,0 +1,20 @@
+{
+  "id": 2,
+  "name": "E-Yantra",
+  "description": "This club works in the E-Yantra lab. E-Yantra lab was established in 2013 with the collaboration of MHRD and IIT Bombay. IIT Bombay organises two competitions every year. One is the e-yantra robotics competition and the second is the e-yantra idea competition. Approximately 40 to 50 students participate every year from our institute. In 2013, our institute won the 5 th  position in the e-yantra idea competition and in 2018-19, we won the 1 st  position in the e-yantra robotics competition, and two students of our institute have been selected for a 45-day internship at IIT Bombay",
+  "category": "ROBOTICS",
+  "iconType": "shield",
+  "logo": "/clubs/technical/E-Yantra/Yantra.webp",
+  "exploreUrl": "#",
+  "teamName": "",
+  "department": "CSE",
+  "teacherCoordinators": [
+    {
+      "name": "Dr. Vineet Sharma",
+      "role": "Faculty Coordinator",
+      "img": ""
+    }
+  ],
+  "studentLeaders": [],
+  "achievements": []
+}

@@ -1,0 +1,20 @@
+{
+  "id": 106,
+  "name": "Uddeshhya",
+  "description": "UDDESHHYA is a student-run NGO registered under the Societies Registration Act, 1860. Operated by the students of KIET, the organization is dedicated to working for the welfare of underprivileged communities.\n\nUddeshhya envisions a society where every individual has access to basic necessities and where true happiness is derived from serving others.This philosophy is encapsulated in our tagline: 'Living for a Reason.'",
+  "category": "DRAMATICS",
+  "iconType": "theater",
+  "logo": "/clubs/cultural/Uddeshhya/Uddeshya.webp",
+  "exploreUrl": "#",
+  "teamName": "",
+  "department": "Cultural Cell",
+  "teacherCoordinators": [
+    {
+      "name": "Dr. Vineet Sharma",
+      "role": "Faculty Coordinator",
+      "img": ""
+    }
+  ],
+  "studentLeaders": [],
+  "achievements": []
+}

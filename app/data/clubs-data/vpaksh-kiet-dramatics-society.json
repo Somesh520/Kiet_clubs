@@ -1,0 +1,20 @@
+{
+  "id": 104,
+  "name": "VPAKSH – KIET Dramatics Society",
+  "description": "VPAKSH – The Official Dramatics Society of KIET is one of the most prestigious cultural clubs of the institute. It was founded with the vision to celebrate creativity, theatrical brilliance, and social impact. The society provides a dynamic stage for students to explore their potential in acting, direction, scriptwriting, stage management, music, props design, and public speaking.\n\nAt its core, VPAKSH believes in the transformative power of theatre.Theatre, for us, is not just entertainment—it is a powerful tool to raise awareness, challenge stereotypes, and inspire constructive change in society.Each performance is carefully curated to blend emotions, expressions, and impactful messages that leave a lasting impression on the audience.\n\nMembers of VPAKSH undergo a holistic journey: from conceptualizing original scripts to intense rehearsals and final execution on stage or in open public spaces.The society regularly performs street plays(Nukkad Nataks), stage plays, skits, monologues, rap battles, flash mobs, and mime performances.With every act, VPAKSH continues to build its legacy of professionalism, originality, and excellence, both on campus and at national - level fests across IITs and reputed institutions.",
+  "category": "DRAMATICS",
+  "iconType": "theater",
+  "logo": "/clubs/cultural/VPAKSH – KIET Dramatics Society/KIETDrama.webp",
+  "exploreUrl": "#",
+  "teamName": "",
+  "department": "Cultural Cell",
+  "teacherCoordinators": [
+    {
+      "name": "Prof. Satish Kumar",
+      "role": "Faculty Coordinator",
+      "img": ""
+    }
+  ],
+  "studentLeaders": [],
+  "achievements": []
+}

@@ -1,0 +1,20 @@
+{
+  "id": 115,
+  "name": "National Service Scheme",
+  "description": "The NSS wing. Mobilizes student volunteers to conduct blood donation camps, village adoptions, and social service projects.",
+  "category": "DRAMATICS",
+  "iconType": "theater",
+  "logo": "/clubs/cultural/National Service Scheme/NationalServiceScheme.webp",
+  "exploreUrl": "#",
+  "teamName": "",
+  "department": "Cultural Cell",
+  "teacherCoordinators": [
+    {
+      "name": "Dr. Vineet Sharma",
+      "role": "Faculty Coordinator",
+      "img": ""
+    }
+  ],
+  "studentLeaders": [],
+  "achievements": []
+}

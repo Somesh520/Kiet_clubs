@@ -1,0 +1,20 @@
+{
+  "id": 4,
+  "name": "CREATIVE CELL",
+  "description": "A community of creative designers, visual artists, and UI/UX enthusiasts. Focuses on product design, brand identity, and design systems.",
+  "category": "DESIGN",
+  "iconType": "design",
+  "logo": "/clubs/technical/CREATIVE CELL/creativecell.webp",
+  "exploreUrl": "#",
+  "teamName": "",
+  "department": "CSE",
+  "teacherCoordinators": [
+    {
+      "name": "Dr. Vineet Sharma",
+      "role": "Faculty Coordinator",
+      "img": ""
+    }
+  ],
+  "studentLeaders": [],
+  "achievements": []
+}

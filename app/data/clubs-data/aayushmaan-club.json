@@ -1,0 +1,20 @@
+{
+  "id": 6,
+  "name": "Aayushmaan Club",
+  "description": "Focuses on health-tech innovations, medical devices, and bio-informatics software tools to improve healthcare standards.",
+  "category": "INNOVATION",
+  "iconType": "design",
+  "logo": "",
+  "exploreUrl": "#",
+  "teamName": "",
+  "department": "CSE",
+  "teacherCoordinators": [
+    {
+      "name": "Dr. Vineet Sharma",
+      "role": "Faculty Coordinator",
+      "img": ""
+    }
+  ],
+  "studentLeaders": [],
+  "achievements": []
+}

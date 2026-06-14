@@ -736,3 +736,60 @@
   }
 }
 
+/* Card Meta Information List Styles */
+.metaInfoList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin: 1.25rem 1.5rem;
+  padding: 0.85rem 0;
+  border-top: 2px dashed #000;
+  border-bottom: 2px dashed #000;
+  transition: border-color 0.2s ease;
+}
+
+.card:hover .metaInfoList {
+  border-color: var(--accent-color, #000);
+}
+
+.metaInfoItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  color: #000;
+}
+
+.metaInfoLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.metaIcon {
+  color: #000;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.card:hover .metaInfoItem:hover .metaIcon {
+  transform: scale(1.15) rotate(4deg);
+}
+
+.metaLabel {
+  font-weight: 600;
+  color: #555;
+}
+
+.metaValue {
+  font-weight: 700;
+  color: #000;
+  text-align: right;
+  max-width: 170px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+

@@ -1,0 +1,20 @@
+{
+  "id": 17,
+  "name": "Industrial Electronics and Control Club",
+  "description": "This Club provides a dynamic platform for students to apply their innovative ideas and transform them into impactful real-world solutions. The club encourages creativity, hands-on learning, and practical implementation through projects, workshops, and industry-aligned activities.",
+  "category": "ROBOTICS",
+  "iconType": "robot",
+  "logo": "/clubs/technical/Industrial Electronics and Control Club/IEC.webp",
+  "exploreUrl": "#",
+  "teamName": "",
+  "department": "ECE",
+  "teacherCoordinators": [
+    {
+      "name": "Dr. Vineet Sharma",
+      "role": "Faculty Coordinator",
+      "img": ""
+    }
+  ],
+  "studentLeaders": [],
+  "achievements": []
+}

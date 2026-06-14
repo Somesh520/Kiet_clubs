@@ -1,0 +1,20 @@
+{
+  "id": 22,
+  "name": "Saekiet",
+  "description": "The SAEINDIA Collegiate Club of KIET has had a remarkable journey since its inception in October 2008. It has provided a valuable platform for students to develop their engineering skills and actively participate in a variety of engineering competitions. Notably, Team IMMORTALS achieved significant recognition by securing the first runner-up position and winning a prize of 2 lakh rupees at BAJA SAEINDIA 2009. Subsequently, they were the sole Asian representative at BAJA SAE Alabama 2009.\nThe year 2013 marked a milestone for Team IMMORTALS as they secured the overall 2nd rank and a cash prize of Rs. 3 lakhs.The club's journey continued with the establishment of Team INCREDIBLES, who achieved the 1st rank in SAENIS Effi-cycle in 2014 and 2016. In addition, Team INVINCIBLES made an impressive debut in SUPRA SAEINDIA, securing the 4th position and later clinching the top rank in successive years.\nThe club's achievements extended beyond national boundaries when they participated in the NASA Human Exploration Rover Challenge 2019 and received the prestigious AIAA Neil Armstrong Best Design Award. To date, the club has won prizes worth ₹18 lakhs and has been recognized as the Best Collegiate Club in the SAE Northern India Section. The club boasts a strong alumni network in leading automobile industries, and it currently comprises more than 100 active student members.\nIn addition to their competitive endeavors, the club also organizes workshops, industrial visits, and guest lectures for its members.Mr.Tuhin Srivastava, a faculty member who was part of the first BAJA team, serves as the mentor, guiding the students towards their achievements.The SAEINDIA Collegiate Club of KIET has demonstrated unwavering dedication to engineering excellence and innovation throughout its journey.\nThe club has transitioned its technical focus toward electric vehicles(EVs) and autonomous systems, providing students with strong industry- relevant exposure.This shift enables hands - on experience through practical projects aligned with emerging automotive technologies.",
+  "category": "ROBOTICS",
+  "iconType": "robot",
+  "logo": "/clubs/technical/Saekiet/SAEKIET.webp",
+  "exploreUrl": "#",
+  "teamName": "",
+  "department": "Mechanical",
+  "teacherCoordinators": [
+    {
+      "name": "Dr. Vineet Sharma",
+      "role": "Faculty Coordinator",
+      "img": ""
+    }
+  ],
+  "studentLeaders": [],
+  "achievements": []
+}

@@ -1,0 +1,20 @@
+{
+  "id": 3,
+  "name": "CP BYTE",
+  "description": "Founded in 2022 under the Department of Computer Science, CPBYTE stands as the official technical club of KIET— a community where innovation meets collaboration. What began as a small initiative to nurture coding culture has now grown into a thriving family of 250+ active members, guided by dedicated mentors and experienced seniors who provide invaluable support at every step.\n\nAt CPBYTE, we believe in learning by doing.The club regularly conducts bootcamps, workshops, hackathons, and speaker sessions, empowering students to build, explore, and excel in the ever- evolving tech world.From sessions on Web Development, Android Development, Git & GitHub, and Generative AI to flagship events like Stranger Stacks and Dev 101, CPBYTE continually creates meaningful learning experiences.\n\nWith strong guidance from our faculty coordinators and senior mentors, we emphasize teamwork, curiosity, and leadership, making CPBYTE not just a club — but a launchpad for innovators, coders, and problem- solvers.",
+  "category": "CODING",
+  "iconType": "code",
+  "logo": "/clubs/technical/CP BYTE/CPBYTE.webp",
+  "exploreUrl": "#",
+  "teamName": "",
+  "department": "CSE",
+  "teacherCoordinators": [
+    {
+      "name": "Dr. Vineet Sharma",
+      "role": "Faculty Coordinator",
+      "img": ""
+    }
+  ],
+  "studentLeaders": [],
+  "achievements": []
+}

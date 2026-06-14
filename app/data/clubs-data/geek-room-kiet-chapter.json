@@ -1,0 +1,20 @@
+{
+  "id": 14,
+  "name": "Geek Room KIET Chapter",
+  "description": "Tech club creating cross-platform mobile apps, cloud architectures, full stack websites, and software integrations.",
+  "category": "CODING",
+  "iconType": "code",
+  "logo": "",
+  "exploreUrl": "#",
+  "teamName": "",
+  "department": "CSE",
+  "teacherCoordinators": [
+    {
+      "name": "Dr. Vineet Sharma",
+      "role": "Faculty Coordinator",
+      "img": ""
+    }
+  ],
+  "studentLeaders": [],
+  "achievements": []
+}

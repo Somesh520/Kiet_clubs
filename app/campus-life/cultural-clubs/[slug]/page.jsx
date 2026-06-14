@@ -3,61 +3,11 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import { motion } from "framer-motion";
-import styles from "./ClubDetail.module.css";
-
-// Import core layout files and data
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
-import BackToTop from "../../components/BackToTop";
-import ImportantLinks from "../../components/ImportantLinks";
-import { IT_MAIN_DATA } from "../../data/it-main";
-import { CLUBS_DATA as TECHNICAL_DATA } from "../../data/technical_club_data";
-import { CLUBS_DATA as CULTURAL_DATA } from "../../data/cultural_club_data";
-
-// Extract metadata styles
-function HeadAssets({ stylesheets, fontPreloads }) {
-  return (
-    <>
-      {fontPreloads.map((href) => (
-        <link key={href} rel="preload" href={href} as="font" crossOrigin="" />
-      ))}
-      {stylesheets.map((href) => (
-        <link key={href} rel="stylesheet" href={href} />
-      ))}
-    </>
-  );
-}
-
-// Global WhatsApp and Admission Widgets
-function FloatingWidgets() {
-  return (
-    <>
-      <div className="right-rotate-90">
-        <a target="_blank" rel="noopener noreferrer" className="text-decoration-none" href="https://admission.kiet.edu/">
-          <p className="d-flex justify-content-center align-items-center cursor-pointer">
-            <span>Register For Admission 2026-27</span>
-          </p>
-        </a>
-      </div>
-      <div className="whatsapp-rotate">
-        <a target="_blank" rel="noopener noreferrer" className="text-decoration-none d-flex align-items-center justify-content-center" href="https://api.whatsapp.com/send/?phone=918588811998&text&app_absent=0">
-          <span className="text-white fw-bold">
-            <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 448 512" color="#fff" style={{ color: "#fff" }} height="24" width="24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6z" />
-            </svg>
-          </span>
-        </a>
-      </div>
-    </>
-  );
-}
+import styles from "../../ClubDetail.module.css";
+import { ALL_CLUBS } from "../../../data/registry";
 
 // Flat list of all clubs
-const allClubs = [
-  ...TECHNICAL_DATA.technical.clubs.map((c) => ({ ...c, type: "technical" })),
-  ...CULTURAL_DATA.cultural.clubs.map((c) => ({ ...c, type: "cultural" })),
-];
+const allClubs = ALL_CLUBS;
 
 // Replicate slug logic exactly
 const getSlug = (name) => {
@@ -225,127 +175,177 @@ const getMockLeaders = (category) => {
   }
 };
 
-export default function ClubDetailPage() {
+export default function CulturalClubDetailPage() {
   const params = useParams();
   const [imgError, setImgError] = useState(false);
+  const [activeTab, setActiveTab] = useState("About");
 
   const slug = params ? params.slug : "";
-  const club = allClubs.find((c) => getSlug(c.name) === slug);
+  const club = allClubs.find((c) => getSlug(c.name) === slug && c.type === "cultural");
 
   if (!club) {
     return (
-      <>
-        <HeadAssets stylesheets={IT_MAIN_DATA.meta.stylesheets} fontPreloads={IT_MAIN_DATA.meta.fontPreloads} />
-        <div className={`${IT_MAIN_DATA.meta.bodyClass} kiet-page-scope`}>
-          <Navbar />
-          <div className={styles.pageWrapper} style={{ '--accent-color': '#FFD600', '--accent-light': '#FFFDE7' }}>
-            <div className={styles.container} style={{ textAlign: "center", padding: "120px 20px" }}>
-              <h1 className={styles.clubTitle}>Club Not Found</h1>
-              <p style={{ fontSize: "1.4rem", marginBottom: "2rem", fontWeight: "500" }}>
-                We couldn't find any club matching "{slug}".
-              </p>
-              <Link href="/campus-life/technical" className={styles.backLink}>
-                <svg stroke="currentColor" fill="none" strokeWidth="2.5" viewBox="0 0 24 24" height="16" width="16" className={styles.backArrow}>
-                  <line x1="19" y1="12" x2="5" y2="12" />
-                  <polyline points="12 19 5 12 12 5" />
-                </svg>
-                <span>Back to Campus Life</span>
-              </Link>
-            </div>
-          </div>
-          <Footer />
-          <FloatingWidgets />
-          <ImportantLinks />
-          <BackToTop />
+      <div className={styles.pageWrapper} style={{ '--accent-color': '#FFD600', '--accent-light': '#FFFDE7' }}>
+        <div className={styles.container} style={{ textAlign: "center", padding: "120px 20px" }}>
+          <h1 className={styles.clubTitle}>Club Not Found</h1>
+          <p style={{ fontSize: "1.4rem", marginBottom: "2rem", fontWeight: "500" }}>
+            We couldn't find any cultural club matching "{slug}".
+          </p>
+          <Link href="/campus-life/cultural" className={styles.backLink}>
+            <svg stroke="currentColor" fill="none" strokeWidth="2.5" viewBox="0 0 24 24" height="16" width="16" className={styles.backArrow}>
+              <line x1="19" y1="12" x2="5" y2="12" />
+              <polyline points="12 19 5 12 12 5" />
+            </svg>
+            <span>Back to Campus Life</span>
+          </Link>
         </div>
-      </>
+      </div>
     );
   }
 
   const colors = getCategoryColors(club.category);
   const features = getCategoryFeatures(club.category);
-  const leaders = getMockLeaders(club.category);
+  const leaders = club.studentLeaders && club.studentLeaders.length > 0 
+    ? club.studentLeaders 
+    : getMockLeaders(club.category);
 
-  const backUrl = club.type === "cultural" ? "/campus-life/cultural" : "/campus-life/technical";
+  const backUrl = "/campus-life/cultural";
+  const coordinator = club.teacherCoordinators && club.teacherCoordinators.length > 0
+    ? club.teacherCoordinators.map((t) => t.name).join(", ")
+    : "";
+  const department = club.department || "";
 
   return (
-    <>
-      <HeadAssets stylesheets={IT_MAIN_DATA.meta.stylesheets} fontPreloads={IT_MAIN_DATA.meta.fontPreloads} />
-      <div className={`${IT_MAIN_DATA.meta.bodyClass} kiet-page-scope`}>
-        <Navbar />
-        <motion.div
-          className={styles.pageWrapper}
-          style={{
-            "--accent-color": colors.accent,
-            "--accent-light": colors.light,
-          }}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-        >
-          <div className={styles.container}>
-            {/* Back Button */}
-            <div className={styles.backLinkWrapper}>
-              <Link href={backUrl} className={styles.backLink}>
-                <svg stroke="currentColor" fill="none" strokeWidth="2.5" viewBox="0 0 24 24" height="16" width="16" className={styles.backArrow}>
-                  <line x1="19" y1="12" x2="5" y2="12" />
-                  <polyline points="12 19 5 12 12 5" />
-                </svg>
-                <span>Go Back</span>
-              </Link>
-            </div>
+    <div
+      className={styles.pageWrapper}
+      style={{
+        "--accent-color": colors.accent,
+        "--accent-light": colors.light,
+      }}
+    >
+      <div className={styles.container}>
+        {/* Back Button */}
+        <div className={styles.backLinkWrapper}>
+          <Link href={backUrl} className={styles.backLink}>
+            <svg stroke="currentColor" fill="none" strokeWidth="2.5" viewBox="0 0 24 24" height="16" width="16" className={styles.backArrow}>
+              <line x1="19" y1="12" x2="5" y2="12" />
+              <polyline points="12 19 5 12 12 5" />
+            </svg>
+            <span>Go Back</span>
+          </Link>
+        </div>
 
-            {/* Header Grid */}
-            <header className={styles.headerGrid}>
-              <div className={styles.headerLeft}>
-                <span className={styles.chapterLabel}>
-                  Official {club.category} {club.type === "cultural" ? "Club" : "Chapter"}
+        {/* Header Grid */}
+        <header className={styles.headerGrid}>
+          <div className={styles.headerLeft}>
+            <div className={styles.metaBadgeGroup}>
+              <span className={styles.chapterLabel}>
+                Official {club.category} Club
+              </span>
+              {department && (
+                <span className={styles.deptLabel}>
+                  Dept: {department}
                 </span>
-                <h1 className={styles.clubTitle}>{club.name}</h1>
-                <a href="#join" className={styles.ctaButton}>
-                  <span>Join Platform</span>
-                  <svg stroke="currentColor" fill="none" strokeWidth="3" viewBox="0 0 24 24" height="20" width="20">
-                    <line x1="5" y1="12" x2="19" y2="12" />
-                    <polyline points="12 5 19 12 12 19" />
-                  </svg>
-                </a>
-              </div>
-              <div className={styles.headerRight}>
-                <div className={styles.logoPanel}>
-                  {imgError || !club.logo ? (
-                    <div className={styles.logoFallback}>
-                      {club.name.charAt(0).toUpperCase()}
-                    </div>
-                  ) : (
-                    <img
-                      src={club.logo}
-                      alt={`${club.name} Logo`}
-                      onError={() => setImgError(true)}
-                      className={styles.logoImg}
-                    />
-                  )}
+              )}
+              {coordinator && (
+                <span className={styles.coordinatorLabel}>
+                  Faculty: {coordinator}
+                </span>
+              )}
+              {club.teamName && (
+                <span className={styles.teamLabel}>
+                  Crew: {club.teamName}
+                </span>
+              )}
+            </div>
+            <h1 className={styles.clubTitle}>{club.name}</h1>
+            <a href="#join" className={styles.ctaButton}>
+              <span>Join Platform</span>
+              <svg stroke="currentColor" fill="none" strokeWidth="3" viewBox="0 0 24 24" height="20" width="20">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </a>
+          </div>
+          <div className={styles.headerRight}>
+            <div className={styles.logoPanel}>
+              {imgError || !club.logo ? (
+                <div className={styles.logoFallback}>
+                  {club.name.charAt(0).toUpperCase()}
                 </div>
-              </div>
-            </header>
+              ) : (
+                <img
+                   src={club.logo}
+                   alt={`${club.name} Logo`}
+                   onError={() => setImgError(true)}
+                   className={styles.logoImg}
+                />
+              )}
+            </div>
+          </div>
+        </header>
 
-            {/* Mission Section */}
-            <section className={styles.missionSection}>
-              <h2 className={styles.sectionHeading}>The Mission</h2>
-              <div className={styles.missionGrid}>
-                <div className={styles.descriptionBox}>
-                  <p className={styles.descriptionText}>{club.description}</p>
-                </div>
-                <div className={styles.featuresGrid}>
-                  {features.map((feat, idx) => (
-                    <div key={idx} className={styles.featureCard}>
-                      <span className={styles.featureIcon}>{feat.icon}</span>
-                      <h4 className={styles.featureTitle}>{feat.title}</h4>
-                      <span className={styles.featureDesc}>{feat.desc}</span>
+        {/* Tab Switcher Navigation */}
+        <nav className={styles.tabsContainer}>
+          {["About", "Team", "Events", "Achievements"].map((tab) => (
+            <button
+              key={tab}
+              onClick={() => setActiveTab(tab)}
+              className={`${styles.tabButton} ${activeTab === tab ? styles.activeTab : ""}`}
+            >
+              {tab}
+            </button>
+          ))}
+        </nav>
+
+        {/* About Tab Content */}
+        {activeTab === "About" && (
+          <section className={styles.missionSection}>
+            <h2 className={styles.sectionHeading}>The Mission</h2>
+            <div className={styles.missionGrid}>
+              <div className={styles.descriptionBox}>
+                <p className={styles.descriptionText}>{club.description}</p>
+              </div>
+              <div className={styles.featuresGrid}>
+                {features.map((feat, idx) => (
+                  <div key={idx} className={styles.featureCard}>
+                    <span className={styles.featureIcon}>{feat.icon}</span>
+                    <h4 className={styles.featureTitle}>{feat.title}</h4>
+                    <span className={styles.featureDesc}>{feat.desc}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* Team Tab Content */}
+        {activeTab === "Team" && (
+          <>
+            {/* Faculty Coordinators Section */}
+            {club.teacherCoordinators && club.teacherCoordinators.length > 0 && (
+              <section className={styles.facultySection}>
+                <h2 className={styles.sectionHeading}>Faculty Coordinators</h2>
+                <div className={styles.leadersGrid}>
+                  {club.teacherCoordinators.map((teacher, idx) => (
+                    <div key={idx} className={styles.leaderCard}>
+                      <div className={styles.avatarWrapper}>
+                        <img
+                          src={teacher.img || "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&q=80"}
+                          alt={teacher.name}
+                          className={styles.leaderAvatar}
+                          loading="lazy"
+                        />
+                      </div>
+                      <div className={styles.leaderInfo}>
+                        <span className={styles.leaderRole}>{teacher.role}</span>
+                        <h4 className={styles.leaderName}>{teacher.name}</h4>
+                      </div>
                     </div>
                   ))}
                 </div>
-              </div>
-            </section>
+              </section>
+            )}
 
             {/* Leadership Section */}
             <section className={styles.leadershipSection}>
@@ -369,13 +369,52 @@ export default function ClubDetailPage() {
                 ))}
               </div>
             </section>
-          </div>
-        </motion.div>
-        <Footer />
-        <FloatingWidgets />
-        <ImportantLinks />
-        <BackToTop />
+          </>
+        )}
+
+        {/* Events Tab Content */}
+        {activeTab === "Events" && (
+          <section className={styles.placeholderSection}>
+            <div className={styles.placeholderCard}>
+              <div className={styles.placeholderIcon}>📅</div>
+              <h3 className={styles.placeholderTitle}>Stay Tuned for Upcoming Events</h3>
+              <p className={styles.placeholderDesc}>
+                We are mapping out our schedule for the upcoming semester. Check back soon for workshops, hands-on hackathons, and guest lectures!
+              </p>
+            </div>
+          </section>
+        )}
+
+        {/* Achievements Tab Content */}
+        {activeTab === "Achievements" && (
+          club.achievements && club.achievements.length > 0 ? (
+            <section className={styles.achievementsSection}>
+              <h2 className={styles.sectionHeading}>Key Achievements</h2>
+              <div className={styles.achievementsGrid}>
+                {club.achievements.map((ach, idx) => (
+                  <div key={idx} className={styles.achievementCard}>
+                    <div className={styles.achievementYear}>
+                      <span>{ach.year}</span>
+                    </div>
+                    <h4 className={styles.achievementTitle}>{ach.title}</h4>
+                    <p className={styles.achievementDesc}>{ach.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+          ) : (
+            <section className={styles.placeholderSection}>
+              <div className={styles.placeholderCard}>
+                <div className={styles.placeholderIcon}>🏆</div>
+                <h3 className={styles.placeholderTitle}>Milestones Pending</h3>
+                <p className={styles.placeholderDesc}>
+                  We are currently compiling our list of achievements and awards. Stay tuned to see how our members make an impact!
+                </p>
+              </div>
+            </section>
+          )
+        )}
       </div>
-    </>
+    </div>
   );
 }

@@ -1,0 +1,20 @@
+{
+  "id": 21,
+  "name": "Pharma Innovation Club",
+  "description": "Fosters medical formulation research, drug delivery science, chemical analyses, and innovative projects in pharmaceutical technology.",
+  "category": "INNOVATION",
+  "iconType": "design",
+  "logo": "",
+  "exploreUrl": "#",
+  "teamName": "",
+  "department": "Pharmacy",
+  "teacherCoordinators": [
+    {
+      "name": "Dr. Vineet Sharma",
+      "role": "Faculty Coordinator",
+      "img": ""
+    }
+  ],
+  "studentLeaders": [],
+  "achievements": []
+}

@@ -1,0 +1,20 @@
+{
+  "id": 20,
+  "name": "MLSA",
+  "description": "The Microsoft Learn Student Ambassadors (MLSA) KIET Community is an active, innovation-driven group at KIET, Ghaziabad. Guided by Dr. Vineet Sharma and supported by Chairperson Mr. Yash Kumar Goel and Faculty Coordinator Dr. Seema Maitrey, the community empowers students to build strong technical and leadership skills. Ambassadors lead workshops, hackathons, speaker sessions, internships, and mentorship programs covering Cloud Computing, AI/ML, Web Development, Cybersecurity, DevOps, and more. Bringing together students from diverse domains, MLSA KIET fosters collaboration, peer learning, and practical exposure. It has become a vibrant on-campus hub for innovation, growth, and impactful learning.",
+  "category": "CODING",
+  "iconType": "code",
+  "logo": "/clubs/technical/MLSA/mlsa.webp",
+  "exploreUrl": "#",
+  "teamName": "",
+  "department": "CSE",
+  "teacherCoordinators": [
+    {
+      "name": "Dr. Seema Maitrey",
+      "role": "Faculty Coordinator",
+      "img": ""
+    }
+  ],
+  "studentLeaders": [],
+  "achievements": []
+}

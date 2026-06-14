@@ -4,17 +4,35 @@ import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import styles from "./ClubsList.module.css";
-import { CLUBS_DATA as TECHNICAL_DATA } from "../data/technical_club_data";
-import { CLUBS_DATA as CULTURAL_DATA } from "../data/cultural_club_data";
+import { TECHNICAL_CLUBS, CULTURAL_CLUBS } from "../data/registry";
 
 const CLUBS_DATA = {
-  technical: TECHNICAL_DATA.technical,
-  cultural: CULTURAL_DATA.cultural
+  technical: {
+    title: "Technical Clubs",
+    description: "Discover and join communities dedicated to technological innovation, coding, robotics, and academic excellence. Engage in projects, workshops, and competitions to elevate your practical skills.",
+    categories: ["ALL", "CODING", "ROBOTICS", "DESIGN", "CYBERSECURITY", "INNOVATION"],
+    clubs: TECHNICAL_CLUBS
+  },
+  cultural: {
+    title: "Cultural Clubs",
+    description: "Discover communities centered around music, dance, drama, art, literature, and creative expression. Participate in performances, cultural events, workshops, and competitions to showcase your talent, build confidence, and connect with like-minded students.",
+    categories: ["ALL", "MUSIC", "DANCE", "DRAMATICS", "PHOTOGRAPHY", "LITERARY"],
+    clubs: CULTURAL_CLUBS
+  }
 };
 
 function ClubCardItem({ club, index }) {
   const [imgError, setImgError] = useState(false);
   const staggerDelay = (index % 3) * 0.08;
+  const clubSlug = club.name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+  const detailUrl = club.type === "cultural"
+    ? `/campus-life/cultural-clubs/${clubSlug}`
+    : `/campus-life/technical-clubs/${clubSlug}`;
+
+  const coordinator = club.teacherCoordinators && club.teacherCoordinators.length > 0
+    ? club.teacherCoordinators.map((t) => t.name).join(", ")
+    : "";
+  const department = club.department || "";
 
   return (
     <motion.div
@@ -65,9 +83,37 @@ function ClubCardItem({ club, index }) {
 
       <p className={styles.cardDescription}>{club.description}</p>
 
+      {/* Club Meta Info (Faculty & Department) */}
+      <div className={styles.metaInfoList}>
+        <div className={styles.metaInfoItem}>
+          <div className={styles.metaInfoLeft}>
+            <svg stroke="currentColor" fill="none" strokeWidth="2.2" viewBox="0 0 24 24" height="18" width="18" className={styles.metaIcon}>
+              <path d="M12 2L2 7l10 5 10-5-10-5Z" />
+              <path d="M6 9.5V14c0 2 2 3.5 6 3.5s6-1.5 6-3.5V9.5" />
+              <path d="M20 7v5" />
+              <path d="M4 22v-1a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v1" />
+            </svg>
+            <span className={styles.metaLabel}>Faculty Coordinator:</span>
+          </div>
+          <span className={styles.metaValue} title={coordinator}>{coordinator}</span>
+        </div>
+
+        <div className={styles.metaInfoItem}>
+          <div className={styles.metaInfoLeft}>
+            <svg stroke="currentColor" fill="none" strokeWidth="2.2" viewBox="0 0 24 24" height="18" width="18" className={styles.metaIcon}>
+              <circle cx="12" cy="10" r="6" />
+              <path d="M12 7l1 2.5h2.5l-2 1.5 0.8 2.5-2.3-1.5-2.3 1.5 0.8-2.5-2-1.5H11z" />
+              <path d="M8.5 15l-1.5 6 5-3 5 3-1.5-6" />
+            </svg>
+            <span className={styles.metaLabel}>Department:</span>
+          </div>
+          <span className={styles.metaValue} title={department}>{department}</span>
+        </div>
+      </div>
+
       <div className={styles.cardFooter}>
         <Link
-          href={`/campus-life/${club.name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}`}
+          href={detailUrl}
           className={styles.exploreButton}
         >
           <span>Explore Club</span>

@@ -1,0 +1,20 @@
+{
+  "id": 107,
+  "name": "kiet movie society",
+  "description": "Formed in 2018, KIET Movie Society (KMS) is a vibrant community dedicated to the art of filmmaking and cinematic storytelling. Beyond producing short films for competitions and presentations, KMS provides a creative platform where students can explore their passion for cinematography, direction, acting, scriptwriting, editing, make-up, and production.\n\nThe society also organizes weekly movie screenings in the KIET Auditorium every scheduled Sunday, promoting entertainment and fostering a culture of cinema appreciation within the campus.Our domains include:\n\n  Production(Photography | Cinematography | Editing)\n  Acting – Bring characters to life!\nContent Writing – Script ideas that shine.\n    Graphics & Creative Arts – Posters, sets, props & more.\n      Management – Plan and execute shoots & events.\n        Makeup & Costume – Style characters with creativity.",
+  "category": "PHOTOGRAPHY",
+  "iconType": "camera",
+  "logo": "/clubs/cultural/kiet movie society/kietmoviesociety.webp",
+  "exploreUrl": "#",
+  "teamName": "",
+  "department": "Cultural Cell",
+  "teacherCoordinators": [
+    {
+      "name": "Dr. Vineet Sharma",
+      "role": "Faculty Coordinator",
+      "img": ""
+    }
+  ],
+  "studentLeaders": [],
+  "achievements": []
+}

@@ -1,0 +1,20 @@
+{
+  "id": 7,
+  "name": "Autodrag",
+  "description": "A student formula racing team and automotive engineering club. Builds and optimizes supercharged combustion and electric vehicle designs.",
+  "category": "ROBOTICS",
+  "iconType": "robot",
+  "logo": "",
+  "exploreUrl": "#",
+  "teamName": "",
+  "department": "Mechanical",
+  "teacherCoordinators": [
+    {
+      "name": "Dr. Vineet Sharma",
+      "role": "Faculty Coordinator",
+      "img": ""
+    }
+  ],
+  "studentLeaders": [],
+  "achievements": []
+}

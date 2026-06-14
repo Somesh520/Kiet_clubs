@@ -1,0 +1,20 @@
+{
+  "id": 109,
+  "name": "Kavyanjali",
+  "description": "Established in 2014, KIET-Kavyanjali stands as a beacon of literary excellence within KIET, dedicated to fostering a vibrant multilingual literary culture among its student body. Through a variety of events and initiatives, KIET-Kavyanjali strives to keep the flame of literature burning brightly, providing a stage for budding talents to showcase their creativity and vast thinking. From Kavi-Sammelans to online poetry competitions, the club has become an integral part of campus life, attracting both renowned poets and emerging wordsmiths alike, with a focus on languages like Hindi and Urdu.",
+  "category": "LITERARY",
+  "iconType": "book",
+  "logo": "/clubs/cultural/Kavyanjali/kavyanjali.webp",
+  "exploreUrl": "#",
+  "teamName": "",
+  "department": "Cultural Cell",
+  "teacherCoordinators": [
+    {
+      "name": "Dr. Vineet Sharma",
+      "role": "Faculty Coordinator",
+      "img": ""
+    }
+  ],
+  "studentLeaders": [],
+  "achievements": []
+}

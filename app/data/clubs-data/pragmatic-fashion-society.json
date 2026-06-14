@@ -1,0 +1,20 @@
+{
+  "id": 116,
+  "name": "Pragmatic Fashion Society",
+  "description": "Pragmatic Fashion Society, the official fashion club of our college, is a creative space where style meets self-expression. From fashion walks and theme-based shows to designing, modeling, and styling, we celebrate individuality and creativity.\n\nWe aim to provide students a platform to showcase their talent, confidence, and passion for fashion while working together as a team.",
+  "category": "DRAMATICS",
+  "iconType": "theater",
+  "logo": "/clubs/cultural/Pragmatic Fashion Society/PragmaticFashionSociety.webp",
+  "exploreUrl": "#",
+  "teamName": "",
+  "department": "Cultural Cell",
+  "teacherCoordinators": [
+    {
+      "name": "Dr. Vineet Sharma",
+      "role": "Faculty Coordinator",
+      "img": ""
+    }
+  ],
+  "studentLeaders": [],
+  "achievements": []
+}

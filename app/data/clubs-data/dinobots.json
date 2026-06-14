@@ -1,0 +1,20 @@
+{
+  "id": 9,
+  "name": "Dinobots",
+  "description": "Dinobots Robotics Club, initiated under the able guidance of Dr. Vibhav Kumar Sachan (HOD ECE) and Dr. Shubham Shukla (Faculty Coordinator), is a passionate community of innovators and engineers who thrive on challenges. We participate in prestigious competitions like ABU Robocon, Robowar, WRC, E-Yantra, AKTU Zonals, and more. Our track record speaks volumes - from securing AIR 2 in ABU Robocon 2015 to clinching AIR 1 in E-Yantra 2019 at IIT Bombay. We&#39;re not just about winning; we&#39;re about pushing the boundaries of robotics and engineering.\n\nOur commitment to excellence drives us to succeed consistently.In 2020, we took first place at AKTU Zonals and third place at the State level, adding to our legacy of achievements.The group focuses on the advancement of the students of this institution in the field of automation and robotics.Join us as we continue our journey to explore, innovate, and build a future where robots play a pivotal role.Stay tuned for exciting updates, workshops, and events.At Dinobots, the future of robotics is in our hands!",
+  "category": "ROBOTICS",
+  "iconType": "robot",
+  "logo": "/clubs/technical/Dinobots/dinobots.webp",
+  "exploreUrl": "#",
+  "teamName": "",
+  "department": "CSE",
+  "teacherCoordinators": [
+    {
+      "name": "Dr. Vineet Sharma",
+      "role": "Faculty Coordinator",
+      "img": ""
+    }
+  ],
+  "studentLeaders": [],
+  "achievements": []
+}

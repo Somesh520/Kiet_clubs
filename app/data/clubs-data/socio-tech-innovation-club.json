@@ -1,0 +1,20 @@
+{
+  "id": 23,
+  "name": "Socio Tech Innovation Club",
+  "description": "Engineers social welfare technology solutions, accessibility tools, community web apps, and clean energy models.",
+  "category": "INNOVATION",
+  "iconType": "design",
+  "logo": "/clubs/technical/Socio Tech Innovation Club/SocioTechInnovationClub.webp",
+  "exploreUrl": "#",
+  "teamName": "",
+  "department": "CSE",
+  "teacherCoordinators": [
+    {
+      "name": "Dr. Vineet Sharma",
+      "role": "Faculty Coordinator",
+      "img": ""
+    }
+  ],
+  "studentLeaders": [],
+  "achievements": []
+}

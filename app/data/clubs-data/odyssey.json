@@ -1,0 +1,20 @@
+{
+  "id": 110,
+  "name": "Odyssey",
+  "description": "Odyssey – The Literary Society of KIET is a vibrant platform where creativity meets confidence. The club is dedicated to enhancing students’ communication skills, critical thinking, and artistic expression through various literary activities. It provides a stage for students to express ideas freely, refine their personality, and develop LSRW (Listening, Speaking, Reading, Writing) skills in an engaging manner.",
+  "category": "LITERARY",
+  "iconType": "book",
+  "logo": "/clubs/cultural/Odyssey/Odyssey.webp",
+  "exploreUrl": "#",
+  "teamName": "",
+  "department": "Cultural Cell",
+  "teacherCoordinators": [
+    {
+      "name": "Dr. Vineet Sharma",
+      "role": "Faculty Coordinator",
+      "img": ""
+    }
+  ],
+  "studentLeaders": [],
+  "achievements": []
+}

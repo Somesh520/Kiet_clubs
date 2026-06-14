@@ -1,0 +1,20 @@
+{
+  "id": 12,
+  "name": "Enovat.X",
+  "description": "Fostering emerging technologies like blockchain, decentralized applications, smart contracts, and Web3 frameworks.",
+  "category": "INNOVATION",
+  "iconType": "design",
+  "logo": "/clubs/technical/Enovat.X/enovatx.webp",
+  "exploreUrl": "#",
+  "teamName": "",
+  "department": "CSE",
+  "teacherCoordinators": [
+    {
+      "name": "Dr. Vineet Sharma",
+      "role": "Faculty Coordinator",
+      "img": ""
+    }
+  ],
+  "studentLeaders": [],
+  "achievements": []
+}

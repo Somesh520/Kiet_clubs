@@ -1,0 +1,20 @@
+{
+  "id": 111,
+  "name": "E-BOOSTER CLUB",
+  "description": "The E-Booster Club works with the objective of organizing events that provide students with opportunities to enhance their communication and aptitude skills. Moreover, the club strongly believes in peer learning as an effective way of development.\n\nWith this vision, the Soft Skills Wing of E - Booster is also taking the initiative to run a Mentor–Mentee Program, aimed at supporting students in improving their communication abilitiesthrough guidance and collaborative learning.\n\nSoft Skills Wing: The club aims to help students overcome the fear of speaking, enhance their English communication skills, and build confidence through continuous interaction and participation.It provides a platform where students can practice, learn, and grow together in a supportive and encouraging environment.\n    QALR : Focuses on strengthening logical reasoning, problem - solving ability, mathematical aptitude, and analytical thinking required for competitive exams and placements.",
+  "category": "LITERARY",
+  "iconType": "book",
+  "logo": "/clubs/cultural/E-BOOSTER CLUB/image.webp",
+  "exploreUrl": "#",
+  "teamName": "",
+  "department": "Cultural Cell",
+  "teacherCoordinators": [
+    {
+      "name": "Dr. Vineet Sharma",
+      "role": "Faculty Coordinator",
+      "img": ""
+    }
+  ],
+  "studentLeaders": [],
+  "achievements": []
+}

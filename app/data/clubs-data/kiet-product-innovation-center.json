@@ -1,0 +1,20 @@
+{
+  "id": 18,
+  "name": "KIET PRODUCT INNOVATION CENTER",
+  "description": "Incubator supporting physical product engineering, rapid 3D printing fabrication, patent filings, and industrial design models.",
+  "category": "INNOVATION",
+  "iconType": "design",
+  "logo": "",
+  "exploreUrl": "#",
+  "teamName": "",
+  "department": "CSE",
+  "teacherCoordinators": [
+    {
+      "name": "Dr. Vineet Sharma",
+      "role": "Faculty Coordinator",
+      "img": ""
+    }
+  ],
+  "studentLeaders": [],
+  "achievements": []
+}

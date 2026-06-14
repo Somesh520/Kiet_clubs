@@ -1,0 +1,20 @@
+{
+  "id": 16,
+  "name": "Hobby Club",
+  "description": "In recognition of the importance of hobby activities and their role in the bringing up of the youthful students, the ECE Department Student’s Hobby Club has been formed with a view to promoting scientific activities of the college. The Student’s Hobby Club in the College collaborates through various committees with the various Faculties in supervising the extra-curricular hobby activities.",
+  "category": "DESIGN",
+  "iconType": "design",
+  "logo": "/clubs/technical/Hobby Club/HobbyClub.webp",
+  "exploreUrl": "#",
+  "teamName": "",
+  "department": "CSE",
+  "teacherCoordinators": [
+    {
+      "name": "Dr. Vineet Sharma",
+      "role": "Faculty Coordinator",
+      "img": ""
+    }
+  ],
+  "studentLeaders": [],
+  "achievements": []
+}

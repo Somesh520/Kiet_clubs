@@ -1,0 +1,20 @@
+{
+  "id": 11,
+  "name": "ECE VLSI Design Club",
+  "description": "Dedicated to microchips, circuit architectures, semiconductors, and electronic design automation tools for VLSI engineering.",
+  "category": "DESIGN",
+  "iconType": "design",
+  "logo": "/clubs/technical/ECE VLSI Design Club/EVDC_logo.webp",
+  "exploreUrl": "#",
+  "teamName": "",
+  "department": "CSE",
+  "teacherCoordinators": [
+    {
+      "name": "Dr. Vineet Sharma",
+      "role": "Faculty Coordinator",
+      "img": ""
+    }
+  ],
+  "studentLeaders": [],
+  "achievements": []
+}

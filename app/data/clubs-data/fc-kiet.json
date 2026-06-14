@@ -1,0 +1,20 @@
+{
+  "id": 108,
+  "name": "fc-kiet",
+  "description": "The film-making and photography club capturing campus life, events, and producing student short films.",
+  "category": "PHOTOGRAPHY",
+  "iconType": "camera",
+  "logo": "/clubs/cultural/fc-kiet/fckiet.webp",
+  "exploreUrl": "#",
+  "teamName": "",
+  "department": "Cultural Cell",
+  "teacherCoordinators": [
+    {
+      "name": "Dr. Vineet Sharma",
+      "role": "Faculty Coordinator",
+      "img": ""
+    }
+  ],
+  "studentLeaders": [],
+  "achievements": []
+}

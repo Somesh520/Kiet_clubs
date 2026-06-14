@@ -1,0 +1,20 @@
+{
+  "id": 101,
+  "name": "Kiet Music club",
+  "description": "KIET Music Club (KMC) is a cultural society dedicated to music and performance.\n\nActively participates in intra & inter - college events.\n\nOrganizes musical events and represents KIET externally\n\nFocuses on nurturing talent in singing, instruments, and performance.",
+  "category": "MUSIC",
+  "iconType": "music",
+  "logo": "/clubs/cultural/Kiet Music club/KietMusicclub (1).webp",
+  "exploreUrl": "#",
+  "teamName": "",
+  "department": "Cultural Cell",
+  "teacherCoordinators": [
+    {
+      "name": "Prof. Karunesh Kant",
+      "role": "Faculty Coordinator",
+      "img": ""
+    }
+  ],
+  "studentLeaders": [],
+  "achievements": []
+}

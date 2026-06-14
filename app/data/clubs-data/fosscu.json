@@ -1,0 +1,20 @@
+{
+  "id": 13,
+  "name": "Fosscu",
+  "description": "Free and Open Source Software community chapter. Encourages git collaboration, open licensing, and student project integrations.",
+  "category": "CODING",
+  "iconType": "code",
+  "logo": "/clubs/technical/Fosscu/fosscu.webp",
+  "exploreUrl": "#",
+  "teamName": "",
+  "department": "CSE",
+  "teacherCoordinators": [
+    {
+      "name": "Dr. Vineet Sharma",
+      "role": "Faculty Coordinator",
+      "img": ""
+    }
+  ],
+  "studentLeaders": [],
+  "achievements": []
+}

@@ -1,0 +1,20 @@
+{
+  "id": 114,
+  "name": "National Cadet Corps",
+  "description": "The National Cadet Corps (NCC) is a premier youth organization in India, functioning under the Ministry of Defence, with the primary objective of developing character, discipline, leadership qualities, secular outlook, spirit of adventure, and ideals of selfless service among young citizens. It provides a platform for students to undergo basic military training while instilling a strong sense of patriotism and responsibility towards the nation.\n\nAt the institutional level, KIET NCC actively engages cadets in structured training activities such as drill, weapon training, map reading, field craft, physical fitness, and personality development.Cadets also participate in social service initiatives including cleanliness drives, blood donation camps, tree plantation, and awareness campaigns, which help in building leadership, teamwork, and social responsibility.\n\nThe enrollment for NCC is conducted annually, selecting dedicated and motivated students.Enrolled cadets undergo a three - year training program during which they attend various prestigious camps such as RDC, AITSC, YEP, CATC, and other national and state - level camps.These experiences enhance their confidence, discipline, and leadership abilities.\n\nCadets appear for ‘B’ and ‘C’ Certificate examinations, which are highly valued and provide significant advantages in defence services and other career opportunities.",
+  "category": "DRAMATICS",
+  "iconType": "theater",
+  "logo": "/clubs/cultural/National Cadet Corps/NCC.webp",
+  "exploreUrl": "#",
+  "teamName": "",
+  "department": "Cultural Cell",
+  "teacherCoordinators": [
+    {
+      "name": "Dr. Vineet Sharma",
+      "role": "Faculty Coordinator",
+      "img": ""
+    }
+  ],
+  "studentLeaders": [],
+  "achievements": []
+}
