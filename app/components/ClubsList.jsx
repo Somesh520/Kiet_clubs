@@ -98,17 +98,19 @@ function ClubCardItem({ club, index }) {
           <span className={styles.metaValue} title={coordinator}>{coordinator}</span>
         </div>
 
-        <div className={styles.metaInfoItem}>
-          <div className={styles.metaInfoLeft}>
-            <svg stroke="currentColor" fill="none" strokeWidth="2.2" viewBox="0 0 24 24" height="18" width="18" className={styles.metaIcon}>
-              <circle cx="12" cy="10" r="6" />
-              <path d="M12 7l1 2.5h2.5l-2 1.5 0.8 2.5-2.3-1.5-2.3 1.5 0.8-2.5-2-1.5H11z" />
-              <path d="M8.5 15l-1.5 6 5-3 5 3-1.5-6" />
-            </svg>
-            <span className={styles.metaLabel}>Department:</span>
+        {department && (
+          <div className={styles.metaInfoItem}>
+            <div className={styles.metaInfoLeft}>
+              <svg stroke="currentColor" fill="none" strokeWidth="2.2" viewBox="0 0 24 24" height="18" width="18" className={styles.metaIcon}>
+                <circle cx="12" cy="10" r="6" />
+                <path d="M12 7l1 2.5h2.5l-2 1.5 0.8 2.5-2.3-1.5-2.3 1.5 0.8-2.5-2-1.5H11z" />
+                <path d="M8.5 15l-1.5 6 5-3 5 3-1.5-6" />
+              </svg>
+              <span className={styles.metaLabel}>Department:</span>
+            </div>
+            <span className={styles.metaValue} title={department}>{department}</span>
           </div>
-          <span className={styles.metaValue} title={department}>{department}</span>
-        </div>
+        )}
       </div>
 
       <div className={styles.cardFooter}>
