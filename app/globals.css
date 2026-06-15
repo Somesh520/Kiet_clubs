@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Black+Ops+One&family=Instrument+Serif:ital,wght@0,400;0,400italic;1,400;1,400italic&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
 /* ─── KIET Color Token System ───────────────────────────────────────────────
    Official KIET department color palette.
    Usage: <h2 className="kiet-text-primary">Heading</h2>
@@ -7,6 +9,10 @@
   --kiet-primary:   #002855;
   --kiet-secondary: #f26520;
   --kiet-tertiary:  #1a1a2e;
+  --font-bebas-neue: 'Bebas Neue', sans-serif;
+  --font-black-ops: 'Black Ops One', cursive;
+  --font-instrument: 'Instrument Serif', serif;
+  --font-space: 'Space Grotesk', sans-serif;
 }
 
 /* Background utilities */

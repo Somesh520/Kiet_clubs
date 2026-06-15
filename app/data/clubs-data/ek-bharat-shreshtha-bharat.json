@@ -52,29 +52,35 @@
   "achievements": [
     {
       "title": "Module Integration",
-      "desc": "Successfully integrated cultural modules into the college's major fests."
+      "desc": "Successfully integrated cultural modules into the college's major fests.",
+      "img": ""
     },
     {
       "title": "Digital Repository",
-      "desc": "Built a digital repository of resources for students to learn about the Northeast Indian lifestyle."
+      "desc": "Built a digital repository of resources for students to learn about the Northeast Indian lifestyle.",
+      "img": ""
     },
     {
       "title": "Student Engagement",
-      "desc": "Maintained a consistent engagement rate of 70% among the student body through awareness campaigns."
+      "desc": "Maintained a consistent engagement rate of 70% among the student body through awareness campaigns.",
+      "img": ""
     }
   ],
   "events": [
     {
       "title": "Cultural Fusion Workshop",
-      "desc": "An interactive session demonstrating the traditional art forms and attire of the \"Land of the Rising Sun\" (Arunachal) and the \"Abode of Clouds\" (Meghalaya)."
+      "desc": "An interactive session demonstrating the traditional art forms and attire of the \"Land of the Rising Sun\" (Arunachal) and the \"Abode of Clouds\" (Meghalaya).",
+      "img": "/clubs/cultural/Ek Bharat Shreshtha Bharat/achievements/poetry_competition.webp"
     },
     {
       "title": "Bhasha Sangram",
-      "desc": "A language-learning initiative where students are taught basic greetings and phrases in Khasi, Garo, and Arunachali dialects."
+      "desc": "A language-learning initiative where students are taught basic greetings and phrases in Khasi, Garo, and Arunachali dialects.",
+      "img": "/clubs/cultural/Ek Bharat Shreshtha Bharat/achievements/story_telling.webp"
     },
     {
       "title": "EBSB Monthly Debate/Quiz",
-      "desc": "Focused on the history and contributions of our paired states to the Indian identity."
+      "desc": "Focused on the history and contributions of our paired states to the Indian identity.",
+      "img": ""
     }
   ]
 }

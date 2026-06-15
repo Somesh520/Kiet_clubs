@@ -21,6 +21,32 @@ const CLUBS_DATA = {
   }
 };
 
+const getCategoryColors = (category) => {
+  const normalized = (category || "").toUpperCase();
+  switch (normalized) {
+    case "CODING":
+    case "CYBERSECURITY":
+      return { accent: "#059669", light: "#ecfdf5" }; // Premium Emerald Green
+    case "ROBOTICS":
+    case "INNOVATION":
+      return { accent: "#d97706", light: "#fef3c7" }; // Aesthetic Amber/Orange
+    case "DESIGN":
+      return { accent: "#db2777", light: "#fdf2f8" }; // Deep Rose Pink
+    case "MUSIC":
+      return { accent: "#dc2626", light: "#fef2f2" }; // Aesthetic Crimson Red
+    case "DANCE":
+      return { accent: "#65a30d", light: "#f7fee7" }; // Olive/Lime Green
+    case "DRAMATICS":
+      return { accent: "#ea580c", light: "#fff5f1" }; // Rich Orange-Red
+    case "PHOTOGRAPHY":
+      return { accent: "#2563eb", light: "#eff6ff" }; // Royal Blue
+    case "LITERARY":
+      return { accent: "#7c3aed", light: "#f5f3ff" }; // Deep Violet
+    default:
+      return { accent: "#ca8a04", light: "#fef9c3" }; // Warm Gold/Yellow
+  }
+};
+
 function ClubCardItem({ club, index }) {
   const [imgError, setImgError] = useState(false);
   const staggerDelay = (index % 3) * 0.08;
@@ -33,10 +59,15 @@ function ClubCardItem({ club, index }) {
     ? club.teacherCoordinators.map((t) => t.name).join(", ")
     : "";
   const department = club.department || "";
+  const colors = getCategoryColors(club.category);
 
   return (
     <motion.div
       className={styles.card}
+      style={{
+        "--accent-color": colors.accent,
+        "--accent-light": colors.light,
+      }}
       data-category={club.category.toLowerCase()}
       initial={{ opacity: 0, y: 35 }}
       whileInView={{ opacity: 1, y: 0 }}

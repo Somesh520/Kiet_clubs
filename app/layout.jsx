@@ -1,4 +1,3 @@
-import { Bebas_Neue } from "next/font/google";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/kiet-theme.scss";
 import "./globals.css";
@@ -8,12 +7,6 @@ import Footer from "./components/Footer";
 import BackToTop from "./components/BackToTop";
 import ImportantLinks from "./components/ImportantLinks";
 import { IT_MAIN_DATA } from "./data/it-main";
-
-const bebasNeue = Bebas_Neue({
-  weight: "400",
-  subsets: ["latin"],
-  variable: "--font-bebas-neue",
-});
 
 export const metadata = {
   metadataBase: new URL("https://www.kiet.edu"),
@@ -67,7 +60,7 @@ function FloatingWidgets() {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={bebasNeue.variable}>
+    <html lang="en">
       <head>
         <HeadAssets stylesheets={IT_MAIN_DATA.meta.stylesheets} fontPreloads={IT_MAIN_DATA.meta.fontPreloads} />
       </head>

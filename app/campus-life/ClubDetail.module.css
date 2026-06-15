@@ -2,10 +2,12 @@
 
 .pageWrapper {
   background-color: #fafafa;
+  background-image: radial-gradient(#dcdcdc 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
   color: #000;
   font-family: 'Space Grotesk', sans-serif;
   min-height: 100vh;
-  padding: 4rem 1rem;
+  padding: 2.5rem 1rem;
 }
 
 .container {
@@ -15,7 +17,7 @@
 
 /* Back Link button */
 .backLinkWrapper {
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
 }
 
 .backLink {
@@ -61,7 +63,7 @@
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   gap: 3rem;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
   align-items: center;
 }
 
@@ -78,17 +80,7 @@
   align-items: flex-start;
 }
 
-.chapterLabel {
-  background-color: var(--accent-color);
-  color: #000;
-  font-weight: 700;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  padding: 0.5rem 1rem;
-  border: 3px solid #000;
-  box-shadow: 3px 3px 0px #000;
-  letter-spacing: 0.1em;
-}
+/* Styling moved to .metaBadgeGroup section for unification */
 
 .clubTitle {
   font-family: 'Black Ops One', sans-serif;
@@ -98,8 +90,13 @@
   margin-bottom: 2rem;
   text-transform: uppercase;
   word-break: break-word;
-  text-shadow: 4px 4px 0px var(--accent-color);
-  -webkit-text-stroke: 1px #000;
+  text-shadow: 3px 3px 0px var(--accent-color), 6px 6px 0px #000;
+  -webkit-text-stroke: 1.5px #000;
+  transition: transform 0.3s ease;
+}
+
+.clubTitle:hover {
+  transform: skewX(-2.5deg) scale(1.02);
 }
 
 @media (max-width: 768px) {
@@ -161,19 +158,48 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.logoStamp {
+  position: absolute;
+  top: 18px;
+  right: -32px;
+  background-color: var(--accent-color);
+  color: #000;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 800;
+  font-size: 0.65rem;
+  padding: 0.25rem 2.2rem;
+  border-top: 3px solid #000;
+  border-bottom: 3px solid #000;
+  transform: rotate(45deg);
+  text-align: center;
+  z-index: 5;
+  letter-spacing: 0.15em;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.15);
+}
+
 .logoPanel:hover {
   transform: rotate(-1.5deg) scale(1.03);
   box-shadow: 16px 16px 0px var(--accent-color);
 }
-
-
+.logoPanel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(var(--accent-color) 15%, transparent 15%);
+  background-size: 16px 16px;
+  opacity: 0.2;
+  z-index: 1;
+}
 
 .logoImg {
   max-width: 80%;
   max-height: 80%;
   object-fit: contain;
   z-index: 2;
-  filter: drop-shadow(4px 4px 0px rgba(0,0,0,0.15));
+  mix-blend-mode: multiply;
 }
 
 .logoFallback {
@@ -184,16 +210,15 @@
   text-shadow: 6px 6px 0px var(--accent-color);
 }
 
-/* Mission Section */
 .missionSection {
-  margin-bottom: 6rem;
+  margin-bottom: 3.5rem;
 }
 
 .sectionHeading {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 3rem;
   color: #000;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
   display: flex;
   align-items: center;
   gap: 1.5rem;
@@ -223,10 +248,27 @@
   background-color: #fff;
   border: 4px solid #000;
   box-shadow: 8px 8px 0px #000;
-  padding: 2.5rem;
+  padding: 3rem 2.5rem 2.5rem 2.5rem;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   position: relative;
   cursor: pointer;
+}
+
+.cardTag {
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  background-color: #000;
+  color: #fff;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  border: 2px solid #000;
+  box-shadow: 2px 2px 0px var(--accent-color);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  z-index: 5;
 }
 
 .descriptionBox:hover {
@@ -270,6 +312,24 @@
   transition: all 0.2s ease;
   display: flex;
   flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.featureNumber {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-family: 'Black Ops One', sans-serif;
+  font-size: 1.6rem;
+  color: #000;
+  opacity: 0.08;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.featureCard:hover .featureNumber {
+  opacity: 0.16;
 }
 
 .featureCard:hover {
@@ -387,26 +447,53 @@
 .metaBadgeGroup {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-bottom: 1.5rem;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  align-items: center;
 }
 
-.deptLabel, .teamLabel, .coordinatorLabel {
-  background-color: #fff;
-  color: #000;
-  font-weight: 750;
+.chapterLabel, .deptLabel, .teamLabel, .coordinatorLabel {
+  display: inline-flex;
+  align-items: center;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
   font-size: 0.85rem;
   text-transform: uppercase;
   padding: 0.5rem 1rem;
   border: 3px solid #000;
-  box-shadow: 3px 3px 0px #000;
+  box-shadow: 4px 4px 0px #000;
   letter-spacing: 0.05em;
-  display: inline-block;
+  transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: default;
+}
+
+.chapterLabel {
+  background-color: var(--accent-color);
+  color: #000;
+}
+
+.deptLabel {
+  background-color: #fff;
+  color: #000;
 }
 
 .teamLabel, .coordinatorLabel {
-  background-color: #fff8f5;
-  box-shadow: 3px 3px 0px var(--accent-color);
+  background-color: var(--accent-light);
+  color: #000;
+}
+
+.chapterLabel:hover, .deptLabel:hover, .teamLabel:hover, .coordinatorLabel:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #000;
+  background-color: var(--accent-light);
+}
+
+.chapterLabel:hover {
+  background-color: var(--accent-color);
+}
+
+.deptLabel:hover {
+  background-color: #fff;
 }
 
 /* ─── Faculty Section ─── */
@@ -419,10 +506,58 @@
   margin-bottom: 6rem;
 }
 
-.achievementsGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+.achievementsTimeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.timelineItem {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.timelineLine {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 18px;
+  width: 4px;
+  background-color: #000;
+  z-index: 1;
+}
+
+.timelineItem:last-child .timelineLine {
+  bottom: auto;
+  height: 20px;
+}
+
+.timelineNode {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  border: 3px solid #000;
+  box-shadow: 2px 2px 0px #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 800;
+  font-size: 1rem;
+  z-index: 2;
+  margin-right: 1.5rem;
+  flex-shrink: 0;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.timelineItem:hover .timelineNode {
+  transform: scale(1.15) rotate(15deg);
+  background-color: #fff;
 }
 
 .achievementCard {
@@ -434,11 +569,38 @@
   flex-direction: column;
   align-items: flex-start;
   transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+  flex-grow: 1;
 }
 
 .achievementCard:hover {
-  transform: translateY(-5px);
+  transform: translate(-3px, -3px);
   box-shadow: 10px 10px 0px #000;
+}
+
+.achievementImgWrapper {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border: 3px solid #000;
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+  background-color: #eee;
+  position: relative;
+  cursor: zoom-in;
+}
+
+.achievementImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.achievementCard:hover .achievementImg {
+  transform: scale(1.02);
+}
+
+.achievementImgWrapper:hover .achievementImg {
+  transform: scale(1.1) rotate(0.5deg);
 }
 
 .achievementYear {
@@ -473,7 +635,7 @@
   display: flex;
   gap: 2.5rem;
   border-bottom: 4px solid #000;
-  margin: 3.5rem 0 3rem 0;
+  margin: 1.5rem 0 2rem 0;
   padding-bottom: 0;
   overflow-x: auto;
   scrollbar-width: none; /* Firefox */
@@ -596,53 +758,158 @@
   margin-bottom: 6rem;
 }
 
-.eventsGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 2rem;
+/* Vertical Event Ticket Stubs */
+.eventsList {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+  margin-top: 1.5rem;
 }
 
 .eventCard {
   background-color: #fff;
   border: 3px solid #000;
   box-shadow: 6px 6px 0px var(--accent-color);
-  padding: 1.75rem;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  align-items: stretch;
+  position: relative;
+  width: 100%;
   transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+  overflow: visible;
+  min-height: 160px;
 }
 
 .eventCard:hover {
-  transform: translateY(-5px);
+  transform: translate(-3px, -3px);
   box-shadow: 10px 10px 0px #000;
 }
 
-.eventDate {
-  background-color: #000;
-  color: #fff;
+.eventDateColumn {
+  background-color: var(--accent-color);
+  color: #000;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.25rem;
+  border-right: 3px dashed #000;
+  min-width: 120px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.eventDateDay {
+  font-size: 2.2rem;
+  line-height: 1;
+  font-weight: bold;
+}
+
+.eventDateMonth {
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  margin-top: 0.25rem;
   letter-spacing: 0.05em;
-  padding: 0.25rem 0.75rem;
-  border-radius: 2px;
-  margin-bottom: 1rem;
+}
+
+.eventDateColumn::before, .eventDateColumn::after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-color: #fafafa;
+  border: 3px solid #000;
+  border-radius: 50%;
+  right: -13.5px;
+  z-index: 3;
+}
+
+.eventDateColumn::before {
+  top: -13.5px;
+}
+
+.eventDateColumn::after {
+  bottom: -13.5px;
+}
+
+.eventContentColumn {
+  padding: 1.75rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.eventImgWrapper {
+  width: 280px;
+  border-left: 3px solid #000;
+  overflow: hidden;
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  cursor: zoom-in;
+}
+
+.eventImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.eventCard:hover .eventImg {
+  transform: scale(1.02);
+}
+
+.eventImgWrapper:hover .eventImg {
+  transform: scale(1.1) rotate(0.5deg);
 }
 
 .eventTitle {
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 700;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   color: #000;
+  margin-bottom: 0.5rem;
   line-height: 1.2;
-  margin-bottom: 0.75rem;
 }
 
 .eventDesc {
   font-size: 0.95rem;
-  line-height: 1.4;
+  line-height: 1.5;
   color: #333;
   margin: 0;
+}
+
+@media (max-width: 768px) {
+  .eventCard {
+    flex-direction: column;
+  }
+  .eventDateColumn {
+    order: 1;
+    border-right: none;
+    border-bottom: 3px dashed #000;
+    min-width: 100%;
+    padding: 1rem;
+  }
+  .eventDateColumn::before, .eventDateColumn::after {
+    display: none;
+  }
+  .eventImgWrapper {
+    order: 2;
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-left: none;
+    border-bottom: 3px solid #000;
+  }
+  .eventContentColumn {
+    order: 3;
+  }
 }
 
 .leaderEmail {
@@ -651,5 +918,77 @@
   margin-top: 0.15rem;
   font-weight: 500;
   word-break: break-all;
+}
+
+/* Lightbox Modal for zooming in on images */
+.lightboxOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  backdrop-filter: blur(4px);
+}
+
+.lightboxContent {
+  position: relative;
+  background-color: #fff;
+  border: 4px solid #000;
+  box-shadow: 10px 10px 0px #000;
+  max-width: 90vw;
+  max-height: 85vh;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  animation: lightboxScale 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes lightboxScale {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.lightboxClose {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  border: 3px solid #000;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: #000;
+  cursor: pointer;
+  box-shadow: 2px 2px 0px #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+  z-index: 10002;
+}
+
+.lightboxClose:hover {
+  transform: scale(1.1) rotate(90deg);
+}
+
+.lightboxImgFull {
+  max-width: 100%;
+  max-height: 75vh;
+  object-fit: contain;
+  border: 3px solid #000;
 }
 

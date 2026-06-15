@@ -128,6 +128,7 @@ export const CULTURAL_CLUBS = rawCultural.map(c => {
   return { ...c, type, department, teacherCoordinators };
 });
 
+// Export combined technical and cultural clubs registry
 export const ALL_CLUBS = [
   ...TECHNICAL_CLUBS,
   ...CULTURAL_CLUBS
