@@ -1,20 +1,90 @@
 {
   "id": 105,
-  "name": "EK PRAYASS",
-  "description": "Ek Prayass is the social welfare club of KIET, dedicated to building a culture of social responsibility among students. The club aims to bridge the gap between education and social welfare by organizing impactful initiatives that address the needs of marginalized communities. Also, striving to eradicate tobacco use and fight addiction in the community, working toward creating healthier, addiction-free environments.\n\nThrough diverse activities such as educational workshops, cleanliness drives, awareness programs, and community visits, Ek Prayass fosters values of empathy, teamwork, and leadership.The club emphasizes holistic development by encouraging students to not only excel academically but also contribute to society meaningfully.\n\nBy collaborating with local schools, villages, and national - level initiatives like Unnat Bharat Abhiyan, Ek Prayass has created sustainable change.The spirit of service lies at the heart of the club’s mission, where each member contributes “one effort” towards uplifting society.With a vision to nurture compassionate professionals and responsible citizens, Ek Prayass continues to inspire and empower young minds to take collective steps for a brighter and inclusive future.",
-  "category": "DRAMATICS",
-  "iconType": "theater",
+  "name": "Ek Prayass",
+  "description": "Ek Prayass is a student-led social welfare initiative dedicated to promoting healthier and more responsible lifestyles among students and communities. The club conducts awareness campaigns against tobacco consumption and supports underprivileged communities through educational outreach and engagement activities.",
+  "category": "SOCIAL WELFARE",
+  "iconType": "heart",
   "logo": "/clubs/cultural/EK PRAYASS/ekprayas.webp",
   "exploreUrl": "#",
-  "teamName": "",
+  "teamName": "Team Ek-Prayass",
   "department": "",
   "teacherCoordinators": [
     {
-      "name": "Dr. Pravesh Singh",
+      "name": "Pravesh Singh",
       "role": "Faculty Coordinator",
+      "img": "",
+      "email": "pravesh.singh@kiet.edu"
+    }
+  ],
+  "studentLeaders": [
+    {
+      "name": "Prabhat Kumar Rai",
+      "role": "Member",
+      "img": ""
+    },
+    {
+      "name": "Naitik Kumar Nayak",
+      "role": "Member",
+      "img": ""
+    },
+    {
+      "name": "Pragya Gupta",
+      "role": "Member",
+      "img": ""
+    },
+    {
+      "name": "Avi Gupta",
+      "role": "Member",
+      "img": ""
+    },
+    {
+      "name": "Vanshika Mittal",
+      "role": "Member",
       "img": ""
     }
   ],
-  "studentLeaders": [],
-  "achievements": []
+  "achievements": [
+    {
+      "title": "Community Outreach",
+      "desc": "Reached and supported students in government schools across Muradnagar and Modinagar.",
+      "img": ""
+    },
+    {
+      "title": "Kitabi Udaan",
+      "desc": "Recycled around 1,000 notebooks and distributed them to students in need.",
+      "img": ""
+    },
+    {
+      "title": "Digital Literacy",
+      "desc": "Conducted digital awareness sessions covering computer basics and Microsoft Excel.",
+      "img": ""
+    },
+    {
+      "title": "Health Awareness",
+      "desc": "Organized anti-tobacco awareness campaigns to encourage healthier lifestyles.",
+      "img": ""
+    }
+  ],
+  "events": [
+    {
+      "title": "Old Age Home Visit",
+      "desc": "Visited an old age home to spend quality time with residents through conversations and interactive activities, promoting compassion and human connection.",
+      "img": ""
+    },
+    {
+      "title": "Children's Day Celebration (Dhenda School)",
+      "desc": "Celebrated Children's Day with notebook distribution under the 'Kitabi Udaan' initiative, along with fun activities and refreshments for students.",
+      "img": ""
+    },
+    {
+      "title": "Computer Literacy Session (Saithli School)",
+      "desc": "Conducted an interactive session introducing students to basic digital skills, including typing, Microsoft Excel, and computer fundamentals.",
+      "img": ""
+    },
+    {
+      "title": "Republic Day Celebration",
+      "desc": "Celebrated Republic Day with students in Dhendha, promoting unity, patriotism, and community engagement.",
+      "img": ""
+    }
+  ]
 }

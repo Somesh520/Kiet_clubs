@@ -15,6 +15,65 @@
       "img": ""
     }
   ],
-  "studentLeaders": [],
-  "achievements": []
+  "studentLeaders": [
+    {
+      "name": "Adarsh Mishra",
+      "role": "President",
+      "img": ""
+    },
+    {
+      "name": "Siddhi Tiwari",
+      "role": "Vice President",
+      "img": ""
+    }
+  ],
+  "achievements": [
+    {
+      "title": "Pratibimb 3.0",
+      "desc": "Successfully organized a major talent hunt event featuring an open mic, singing, dancing, and an art exhibition for an audience of 270.",
+      "img": ""
+    },
+    {
+      "title": "Skill Development",
+      "desc": "Conducted specialized workshops in Adobe Premiere Pro editing and personality development for club members.",
+      "img": ""
+    },
+    {
+      "title": "Cultural Celebration",
+      "desc": "Organized a painting competition on U.P. Foundation Day to celebrate regional heritage and constitutional values.",
+      "img": ""
+    }
+  ],
+  "events": [
+    {
+      "title": "U.P. Foundation Day Painting Competition",
+      "desc": "A cultural activity celebrating Uttar Pradesh's heritage and Indian constitutional values through student artwork.",
+      "img": ""
+    },
+    {
+      "title": "Editing Workshop",
+      "desc": "A hands-on technical session focusing on Adobe Premiere Pro interface, timeline editing, and transitions.",
+      "img": ""
+    },
+    {
+      "title": "PersonaQuest",
+      "desc": "A personality development workshop covering public speaking, body language, and leadership skills.",
+      "img": ""
+    },
+    {
+      "title": "Creative Workshop",
+      "desc": "An artistic session where students explored color blending and visual storytelling through painting.",
+      "img": ""
+    },
+    {
+      "title": "PRATIBIMB 3.0 Talent Hunt",
+      "desc": "An offline event providing a platform for stand-up comedy, beatboxing, and other diverse talents.",
+      "img": ""
+    },
+    {
+      "title": "BGMI Tournament",
+      "desc": "An online competitive gaming event aimed at fostering player engagement within the community.",
+      "img": ""
+    }
+  ]
 }
