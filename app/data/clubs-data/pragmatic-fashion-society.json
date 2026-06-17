@@ -15,6 +15,85 @@
       "img": ""
     }
   ],
-  "studentLeaders": [],
-  "achievements": []
+  "studentLeaders": [
+    {
+      "name": "Archie agarwal",
+      "role": "President",
+      "img": ""
+    }
+  ],
+  "achievements": [
+    {
+      "title": "Winner at Scintilla 2026",
+      "desc": "The Pragmatic Fashion Society secured the top position and a cash prize of ₹8,000 at the event hosted by Jaipuria School of Business.",
+      "img": ""
+    },
+    {
+      "title": "Winner at Epoque Prastuti 2026",
+      "desc": "The society emerged as winners at the institutional-level competition held at KIET Deemed to be University.",
+      "img": ""
+    },
+    {
+      "title": "1st Runner-up at Galgotia Unifest 2026",
+      "desc": "Secured the 1st runner-up position along with a cash prize of ₹15,000 at Galgotias University.",
+      "img": ""
+    },
+    {
+      "title": "Runner-up at Amifest 2026",
+      "desc": "Achieved the runner-up position at the prestigious platform hosted by Amity University Gurugram.",
+      "img": ""
+    },
+    {
+      "title": "Runner-up at Navtarang 2026",
+      "desc": "Secured the runner-up position and a cash prize of ₹6,000 at ITS Mohan Nagar.",
+      "img": ""
+    }
+  ],
+  "events": [
+    {
+      "title": "Scintilla 2026",
+      "desc": "A fashion showcase held on February 21, 2026, at Jaipuria School of Business featuring innovative styling and synchronized choreography.",
+      "img": ""
+    },
+    {
+      "title": "Amifest 2026",
+      "desc": "A major intercollegiate fest held on February 12-13, 2026, where the team presented a fusion of innovative styling and storytelling.",
+      "img": ""
+    },
+    {
+      "title": "Beparwaah",
+      "desc": "The club's flagship event held on February 25, celebrating individuality and self-expression through fashion and performances.",
+      "img": ""
+    },
+    {
+      "title": "Navtarang 2026",
+      "desc": "A competition held on February 26, 2026, at ITS Mohan Nagar showcasing distinctive concepts and confident runway presence.",
+      "img": ""
+    },
+    {
+      "title": "Epoque Prastuti 2026",
+      "desc": "An institutional-level cultural fest held on April 2, 2026, at KIET where the society delivered a winning performance.",
+      "img": ""
+    },
+    {
+      "title": "Galgotia Unifest 2026",
+      "desc": "A competitive event held on April 8, 2026, at Galgotias University highlighting creative excellence and seamless coordination.",
+      "img": ""
+    },
+    {
+      "title": "Innayatien 2.0",
+      "desc": "A fashion-focused event held on September 23 in collaboration with KIET Movie Society centered on style and creativity.",
+      "img": ""
+    },
+    {
+      "title": "Pratibimb 3.0",
+      "desc": "A collaborative event held on October 1 with Impeccables, celebrating art and diverse creative expressions.",
+      "img": ""
+    },
+    {
+      "title": "Modelling Workshop",
+      "desc": "A two-day grooming and personality development workshop held on November 8-9 with Puneet Kathuria.",
+      "img": ""
+    }
+  ]
 }

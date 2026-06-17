@@ -15,6 +15,45 @@
       "img": ""
     }
   ],
-  "studentLeaders": [],
-  "achievements": []
+  "studentLeaders": [
+    {
+      "name": "Aniket Ray",
+      "role": "President",
+      "img": ""
+    },
+    {
+      "name": "Tripti Garg",
+      "role": "Vice President",
+      "img": ""
+    },
+    {
+      "name": "Shruti Yadav",
+      "role": "Vice President",
+      "img": ""
+    }
+  ],
+  "achievements": [
+    {
+      "title": "Academic Enrichment and Student Development",
+      "desc": "Successfully reinforced the institution's commitment to holistic student development through high-level collaborative initiatives and interactive sessions with eminent personalities.",
+      "img": ""
+    },
+    {
+      "title": "Promotion of Creative and Intellectual Engagement",
+      "desc": "Successfully created a supportive and dynamic space for student engagement, fostering a culture of critical thinking and articulate expression.",
+      "img": ""
+    }
+  ],
+  "events": [
+    {
+      "title": "KIET Knowledge Series (Odyssey × MUN Collaboration)",
+      "desc": "A collaborative initiative aimed at bridging the gap between theoretical knowledge and real-life applications through sessions with speakers like Atul Garg, Vyomika Singh, and Deepak Vohra.",
+      "img": ""
+    },
+    {
+      "title": "Odyssey Open Sessions 2025",
+      "desc": "An inclusive platform for students to present poetry, storytelling, public speaking, and creative performances to enhance communication and soft skills.",
+      "img": ""
+    }
+  ]
 }

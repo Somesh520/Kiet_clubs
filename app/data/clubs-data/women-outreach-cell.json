@@ -15,6 +15,50 @@
       "img": ""
     }
   ],
-  "studentLeaders": [],
-  "achievements": []
+  "studentLeaders": [
+    {
+      "name": "RADHIKA SAXENA",
+      "role": "President",
+      "img": ""
+    },
+    {
+      "name": "BHOOMI SHARMA",
+      "role": "Vice President",
+      "img": ""
+    }
+  ],
+  "achievements": [
+    {
+      "title": "1st Position in Rangoli Competition, Landcraft Flower Show",
+      "desc": "The Women Outreach Cell (WORC) team, including Bhoomi Sharma, Mansi, Radhika Saxena, Palak, and Harshita Malhotra, secured the First Prize in the Rangoli Competition at the Landcraft Flower Show & Chatkara Food Festival. The theme was 'Vande Mataram – 150 Years,' focusing on environmental protection.",
+      "img": ""
+    }
+  ],
+  "events": [
+    {
+      "title": "Candle Making Program 'Udaan – Women Empowerment Mission'",
+      "desc": "Organized a skill development training session in Basantpur Sainthly village to empower 50 rural women, enabling them to explore candle making as a potential source of income and entrepreneurship.",
+      "img": ""
+    },
+    {
+      "title": "Handmade Rakhi Activity under Green Mission",
+      "desc": "Conducted a creative activity at PM SHRI Composite Vidyalaya, Basantpur Sainthli, where 50 girls crafted rakhis from waste materials to promote recycling and sustainable living.",
+      "img": ""
+    },
+    {
+      "title": "Special Counselling Session under Viksit Bharat",
+      "desc": "A guidance session held at PM SHRI Kendriya Vidyalaya, Muradnagar, for over 50 students to help them identify inner strengths and nurture an entrepreneurial mindset.",
+      "img": ""
+    },
+    {
+      "title": "Adolescent Health Programme for Girls",
+      "desc": "Part of the Mission Shakti initiative, this program at Sir Chhotu Ram Kisan Kanya Inter College educated 100 girls on physical and mental health, hygiene, and personal safety.",
+      "img": ""
+    },
+    {
+      "title": "Pickle Making Training for Women Employment",
+      "desc": "A social initiative in Village Dwedha aimed at enhancing the financial independence of women from underprivileged communities and rural areas through vocational training.",
+      "img": ""
+    }
+  ]
 }

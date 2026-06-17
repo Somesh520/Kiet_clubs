@@ -1,13 +1,13 @@
 {
   "id": 107,
-  "name": "kiet movie society",
-  "description": "Formed in 2018, KIET Movie Society (KMS) is a vibrant community dedicated to the art of filmmaking and cinematic storytelling. Beyond producing short films for competitions and presentations, KMS provides a creative platform where students can explore their passion for cinematography, direction, acting, scriptwriting, editing, make-up, and production.\n\nThe society also organizes weekly movie screenings in the KIET Auditorium every scheduled Sunday, promoting entertainment and fostering a culture of cinema appreciation within the campus.Our domains include:\n\n  Production(Photography | Cinematography | Editing)\n  Acting – Bring characters to life!\nContent Writing – Script ideas that shine.\n    Graphics & Creative Arts – Posters, sets, props & more.\n      Management – Plan and execute shoots & events.\n        Makeup & Costume – Style characters with creativity.",
+  "name": "KIET Movie Society",
+  "description": "Formed in 2018, KIET Movie Society (KMS) is a vibrant community dedicated to the art of filmmaking and cinematic storytelling. Beyond producing short films for competitions and presentations, KMS provides a creative platform where students can explore their passion for cinematography, direction, acting, scriptwriting, editing, make-up, and production.\n\nThe society also organizes weekly movie screenings in the KIET Auditorium every scheduled Sunday, promoting entertainment and fostering a culture of cinema appreciation within the campus. Our domains include:\n\n Production (Photography | Cinematography | Editing)\n Acting – Bring characters to life!\n Content Writing – Script ideas that shine.\n Graphics & Creative Arts – Posters, sets, props & more.\n Management – Plan and execute shoots & events.\n Makeup & Costume – Style characters with creativity.",
   "category": "PHOTOGRAPHY",
   "iconType": "camera",
   "logo": "/clubs/cultural/kiet movie society/kietmoviesociety.webp",
   "exploreUrl": "#",
-  "teamName": "",
-  "department": "",
+  "teamName": "KMS Team",
+  "department": "Cultural Council",
   "teacherCoordinators": [
     {
       "name": "Dr. Mukul Aggarwal",
@@ -15,6 +15,58 @@
       "img": ""
     }
   ],
-  "studentLeaders": [],
-  "achievements": []
+  "studentLeaders": [
+    {
+      "name": "Manav Singh",
+      "role": "President",
+      "img": ""
+    }
+  ],
+  "achievements": [
+    {
+      "title": "Vivacity '26 (LNMIIT Jaipur) Victory",
+      "desc": "Secured FMC Winner, Mime (2nd Position) & Skit Runner Up at the national fest on Feb 05, 2026.",
+      "img": ""
+    },
+    {
+      "title": "Epoque@Prastuti 2026 Success",
+      "desc": "Won First Runner up in Skit & Mime competitions on Apr 04, 2026.",
+      "img": ""
+    },
+    {
+      "title": "Special Skit for Embassy of Rwanda",
+      "desc": "Received special appreciation for performing at Bharat Mandapam on Apr 07, 2026.",
+      "img": ""
+    },
+    {
+      "title": "SIH Movie Screening Appreciation",
+      "desc": "Earned appreciation for a special film screening during the Smart India Hackathon on Dec 07, 2025.",
+      "img": ""
+    },
+    {
+      "title": "Innayatein 2.0 Showcase",
+      "desc": "Appreciation earned for creative work and presentation on Sep 23, 2025.",
+      "img": ""
+    }
+  ],
+  "events": [
+    {
+      "title": "Movie Screening - 'Godan'",
+      "desc": "A campus screening of the cinematic adaptation of Premchand's classic novel 'Godan' at KIET Deemed to be University.",
+      "date": "Apr 12, 2026",
+      "img": ""
+    },
+    {
+      "title": "Epoque@Prastuti 2026 Promotion & Coverage",
+      "desc": "Handled official campaign promotions and complete video coverage of the annual cultural festival.",
+      "date": "Apr 03, 2026",
+      "img": ""
+    },
+    {
+      "title": "Movie Promotion Campaign",
+      "desc": "Conducted a creative promotional event and campus screening of upcoming short films.",
+      "date": "Nov 03, 2025",
+      "img": ""
+    }
+  ]
 }

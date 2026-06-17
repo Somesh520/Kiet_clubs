@@ -2,8 +2,8 @@
   "id": 114,
   "name": "National Cadet Corps",
   "description": "The National Cadet Corps (NCC) is a premier youth organization in India, functioning under the Ministry of Defence, with the primary objective of developing character, discipline, leadership qualities, secular outlook, spirit of adventure, and ideals of selfless service among young citizens. It provides a platform for students to undergo basic military training while instilling a strong sense of patriotism and responsibility towards the nation.\n\nAt the institutional level, KIET NCC actively engages cadets in structured training activities such as drill, weapon training, map reading, field craft, physical fitness, and personality development.Cadets also participate in social service initiatives including cleanliness drives, blood donation camps, tree plantation, and awareness campaigns, which help in building leadership, teamwork, and social responsibility.\n\nThe enrollment for NCC is conducted annually, selecting dedicated and motivated students.Enrolled cadets undergo a three - year training program during which they attend various prestigious camps such as RDC, AITSC, YEP, CATC, and other national and state - level camps.These experiences enhance their confidence, discipline, and leadership abilities.\n\nCadets appear for ‘B’ and ‘C’ Certificate examinations, which are highly valued and provide significant advantages in defence services and other career opportunities.",
-  "category": "DRAMATICS",
-  "iconType": "theater",
+  "category": "Social",
+  "iconType": "Social",
   "logo": "/clubs/cultural/National Cadet Corps/NCC.webp",
   "exploreUrl": "#",
   "teamName": "",
@@ -15,6 +15,98 @@
       "img": ""
     }
   ],
-  "studentLeaders": [],
-  "achievements": []
+  "studentLeaders": [
+    {
+      "name": "AYUSH KUMAR CHAURASIA",
+      "role": "President",
+      "img": ""
+    },
+    {
+      "name": "PRINCE",
+      "role": "Vice President",
+      "img": ""
+    }
+  ],
+  "achievements": [
+    {
+      "title": "Defence Selections",
+      "desc": "Cadet Avni (NDA 154, AIR 209), Cadet Kartikey Teotia (TES/Navy), and Cadet Rudraksh (INA) successfully selected.",
+      "img": ""
+    },
+    {
+      "title": "Battalion Project Success",
+      "desc": "JUO Akash Pal and JUO Gaurang Chaudhary secured 6th position at the UP Directorate Camp (Kanpur HQ).",
+      "img": ""
+    },
+    {
+      "title": "Case Manthan Excellence",
+      "desc": "Cadet Parul Yadav emerged as the solo winner; Team Batra secured 1st position and Team Kheterpal ranked among the top teams.",
+      "img": ""
+    },
+    {
+      "title": "Mountaineering Camp",
+      "desc": "Cadets Sahajdeep Singh Gill, Ayush Kumar Chaurasia, Prince, and Pratul Tiwari completed training at Adi Kailash, Uttarakhand.",
+      "img": ""
+    },
+    {
+      "title": "Annual Sports Fest (DTU)",
+      "desc": "Cadet Utkarsh Singh won a silver medal (4×100m relay) and bronze medals (4×400m/mixed relay).",
+      "img": ""
+    },
+    {
+      "title": "Best Cadet Award",
+      "desc": "Cadet Ritdhwaj Mishra was honored as the Best Cadet at CATC-134 in Noida for his leadership.",
+      "img": ""
+    }
+  ],
+  "events": [
+    {
+      "title": "Guard of Honour",
+      "desc": "Presented to Wing Commander Vyomika Singh followed by an interactive session.",
+      "date": "Not specified",
+      "img": ""
+    },
+    {
+      "title": "Republic Day 2026",
+      "desc": "Parade, Guard of Honour, and rank ceremony.",
+      "date": "Jan 26, 2026",
+      "img": ""
+    },
+    {
+      "title": "Independence Day",
+      "desc": "Parade, salute, and group song performance.",
+      "date": "Aug 15, 2025",
+      "img": ""
+    },
+    {
+      "title": "Flag March",
+      "desc": "Organized to celebrate Operation Sindoor and honor the Indian Armed Forces.",
+      "date": "Not specified",
+      "img": ""
+    },
+    {
+      "title": "SAAMANT 2025-26",
+      "desc": "Participation in Case Manthan and sports events at Delhi Technological University.",
+      "date": "2025-26",
+      "img": ""
+    },
+    {
+      "title": "Major Ashish Goswami Session",
+      "desc": "Interactive session under the theme 'Yuva Shakti – Bharat Vision 2047'.",
+      "date": "Not specified",
+      "img": ""
+    },
+    {
+      "title": "Ambedkar Birth Anniversary Debate",
+      "desc": "Debate on 'Is Education the Ultimate Tool for Empowerment?'.",
+      "date": "Not specified",
+      "img": ""
+    },
+    {
+      "title": "NCC Enrollment Drive",
+      "desc": "Annual recruitment drive for 1st and 2nd year students.",
+      "date": "Not specified",
+      "img": ""
+    }
+  ]
 }

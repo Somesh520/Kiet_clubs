@@ -15,6 +15,24 @@
       "img": ""
     }
   ],
-  "studentLeaders": [],
-  "achievements": []
+  "studentLeaders": [
+    {
+      "name": "Diwakar Singh ",
+      "role": "President",
+      "img": ""
+    },
+    {
+      "name": "Ananya Chaudhary",
+      "role": "Vice President",
+      "img": ""
+    }
+  ],
+  "achievement": [],
+  "events": [
+    {
+      "title": "TEDxKIET 2026",
+      "desc": "A flagship TEDx event hosted at KIET on 10 April 2026 with over 200 student participants. Distinguished speakers from fields such as authorship, journalism, entrepreneurship, performing arts, cybersecurity, and leadership shared ideas and experiences, fostering innovation, critical thinking, and personal growth among attendees.",
+      "img": ""
+    }
+  ]
 }

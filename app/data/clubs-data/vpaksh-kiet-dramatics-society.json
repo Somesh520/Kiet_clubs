@@ -15,6 +15,60 @@
       "img": ""
     }
   ],
-  "studentLeaders": [],
-  "achievements": []
+  "studentLeaders": [
+    {
+      "name": "Shruti Singh ",
+      "role": "President",
+      "img": ""
+    },
+    {
+      "name": "Saksham Mohan",
+      "role": "Vice President",
+      "img": ""
+    }
+  ],
+  "achievements": [
+    {
+      "title": "1st Position in Skit, Epoque@Prastuti 2026",
+      "desc": "Vpaksh secured 1st position in the Skit competition at Epoque@Prastuti 2026, demonstrating outstanding theatrical performance and teamwork.",
+      "img": ""
+    },
+    {
+      "title": "2nd Position in Nukkad Natak, Epoque@Prastuti 2026",
+      "desc": "The team achieved 2nd position in Nukkad Natak at Epoque@Prastuti 2026 through a compelling street theatre performance.",
+      "img": ""
+    },
+    {
+      "title": "1st Position in Nukkad Natak, Epoque@Prastuti 2025",
+      "desc": "Vpaksh earned 1st position in the Nukkad Natak competition during Epoque@Prastuti 2025.",
+      "img": ""
+    },
+    {
+      "title": "2nd Position in Skit, Epoque@Prastuti 2025",
+      "desc": "The club secured 2nd position in the Skit competition at Epoque@Prastuti 2025, showcasing creativity and acting excellence.",
+      "img": ""
+    }
+  ],
+  "events": [
+    {
+      "title": "Awareness Nukkad Natak Against Drug Consumption",
+      "desc": "Conducted a street play for school students to spread awareness about the harmful effects of drug consumption under an initiative by UP Police.",
+      "img": ""
+    },
+    {
+      "title": "Act It Out 4.0",
+      "desc": "Participated in the monologue-based theatre event Act It Out 4.0, featuring performances by members of Vpaksh and Natshala Theatre Group.",
+      "img": ""
+    },
+    {
+      "title": "Environment Day Nukkad Natak",
+      "desc": "Performed a street play on the occasion of Environment Day in collaboration with Uddeshhya to promote environmental awareness.",
+      "img": ""
+    },
+    {
+      "title": "Official Farewell 2025 Performance",
+      "desc": "Presented a theatrical skit during the official farewell ceremony of the Batch of 2025, entertaining and engaging the audience.",
+      "img": ""
+    }
+  ]
 }

@@ -15,6 +15,50 @@
       "img": ""
     }
   ],
-  "studentLeaders": [],
-  "achievements": []
+  "studentLeaders": [
+    {
+      "name": "Rishit Singh",
+      "role": "President",
+      "img": ""
+    },
+    {
+      "name": "Aarohi Saxena",
+      "role": "Vice President",
+      "img": ""
+    }
+  ],
+  "achievements": [
+    {
+      "title": "Inter-Institutional Success",
+      "desc": "Kavyanjali members secured top positions at prestigious fests, including Rishit Singh winning 1st place at Melange'25 (IMS Ghaziabad) and Dev Tyagi securing 1st place at Confluence 2K25 (NIT Kurukshetra).",
+      "img": ""
+    },
+    {
+      "title": "Regional Literary Excellence",
+      "desc": "The club achieved significant recognition at premier regional events like Mridang'25 at ABES Ghaziabad, where Aditya Shivhare earned the 2nd Runner-Up position among top institutions from Delhi-NCR.",
+      "img": ""
+    },
+    {
+      "title": "Platform for Emerging Talent",
+      "desc": "Established inclusive open-mic sessions through Kavya-Dhara, providing a dedicated stage for over 45 budding poets to express creativity and engage with the literary community.",
+      "img": ""
+    }
+  ],
+  "events": [
+    {
+      "title": "Kavi Sammelan @ Epoque",
+      "desc": "A grand literary celebration held on Apr 03, 2026, featuring renowned poets like Kushal Dauneria and Sarvesh Asthana, focusing on the rich tradition of Hindi literature.",
+      "img": ""
+    },
+    {
+      "title": "Kavya-Dhara",
+      "desc": "A multi-level cultural event showcasing a tapestry of poetry, shayari, and spoken word to foster a vibrant campus literary culture, hosted at the KIET CRPC Hall.",
+      "img": "/clubs/cultural/Ek Bharat Shreshtha Bharat/achievements/poetry_competition.webp"
+    },
+    {
+      "title": "Mridang '25 Participation",
+      "desc": "A high-caliber poetry slam held on Nov 10, 2025, themed around 'Navras,' where members interpreted fundamental human emotions through performance poetry.",
+      "img": "/clubs/cultural/Ek Bharat Shreshtha Bharat/achievements/story_telling.webp"
+    }
+  ]
 }

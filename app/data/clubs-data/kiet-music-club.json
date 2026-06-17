@@ -15,6 +15,50 @@
       "img": ""
     }
   ],
-  "studentLeaders": [],
-  "achievements": []
+  "studentLeaders": [
+    {
+      "name": "Khushi Shakya",
+      "role": "President",
+      "img": ""
+    },
+    {
+      "name": "Divyanshu Tiwari",
+      "role": "Vice President",
+      "img": ""
+    }
+  ],
+  "achievements": [
+    {
+      "title": "Epoque@Prastuti 2026 Success",
+      "desc": "Secured major wins including 1st Position in Solo Singing (Khushi Shakya), Winner in Group Singing (Tarang), Winner in Beatboxing (Pratham Saxena), and Runner-up in Band War (Advait).",
+      "img": ""
+    },
+    {
+      "title": "External Competitive Excellence",
+      "desc": "Achieved consistent top positions across 2025-26 at prestigious institutions including IIT Mandi, LBSIM, HIMT, Jaipuria, Razzmatazz, and Shobhit Institute.",
+      "img": ""
+    },
+    {
+      "title": "Epoque@Prastuti 2025 Victories",
+      "desc": "Achieved multiple wins including Group Singing (Swaraang), Solo Singing (Shivani Tiwari), Beatboxing (Pratham Saxena), and Battle of Bands (Vaani).",
+      "img": ""
+    }
+  ],
+  "events": [
+    {
+      "title": "Epoque@Prastuti 2026",
+      "desc": "The annual cultural fest held at KIET Campus from April 2–4, 2026, featuring high-caliber inter and intra-institute musical competitions.",
+      "img": ""
+    },
+    {
+      "title": "External Participation",
+      "desc": "Active participation in inter-college musical competitions throughout the 2025-26 academic year, showcasing KMC talent at events like Spriesta and Sangeetam.",
+      "img": ""
+    },
+    {
+      "title": "Epoque@Prastuti 2025",
+      "desc": "A major cultural fest held from March 27–29, 2025, serving as a key platform for KMC's competitive success.",
+      "img": ""
+    }
+  ]
 }

@@ -15,6 +15,45 @@
       "img": ""
     }
   ],
-  "studentLeaders": [],
-  "achievements": []
+  "studentLeaders": [
+    {
+      "name": "Aryan Singh",
+      "role": "President",
+      "img": ""
+    },
+    {
+      "name": "Divyansh Srivastava",
+      "role": "Vice President",
+      "img": ""
+    }
+  ],
+  "achievements": [
+    {
+      "title": "Winner at Epoque@Prastuti - 2026",
+      "desc": "The Phoenix Dance Crew won the dance competition at Epoque@Prastuti - 2026, showcasing exceptional skill and teamwork.",
+      "img": ""
+    }
+  ],
+  "events": [
+    {
+      "title": "Epoque@Prastuti - 2026",
+      "desc": "Inter-college cultural fest where the Phoenix Dance Crew delivered a powerful and well-coordinated winning performance.",
+      "img": ""
+    },
+    {
+      "title": "Smart India Hackathon, 2025",
+      "desc": "The Phoenix Dance Crew delivered an energetic and captivating performance during the SIH event held at the college.",
+      "img": ""
+    },
+    {
+      "title": "Group dance competition in CGC, Mohali",
+      "desc": "Active participation in a dance competition hosted by Chandigarh Group of Colleges, showcasing talent and team spirit.",
+      "img": ""
+    },
+    {
+      "title": "Riwaayat-e-Rangmanch",
+      "desc": "A musical eve organized by the Phoenix Dance Crew in the college campus featuring singing, dance, and fashion events.",
+      "img": ""
+    }
+  ]
 }

@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import styles from "./ClubsList.module.css";
-import { TECHNICAL_CLUBS, CULTURAL_CLUBS } from "../data/registry";
+import { TECHNICAL_CLUBS, CULTURAL_CLUBS, getCategoryColors } from "../data/registry";
 
 const CLUBS_DATA = {
   technical: {
@@ -21,31 +21,7 @@ const CLUBS_DATA = {
   }
 };
 
-const getCategoryColors = (category) => {
-  const normalized = (category || "").toUpperCase();
-  switch (normalized) {
-    case "CODING":
-    case "CYBERSECURITY":
-      return { accent: "#059669", light: "#ecfdf5" }; // Premium Emerald Green
-    case "ROBOTICS":
-    case "INNOVATION":
-      return { accent: "#d97706", light: "#fef3c7" }; // Aesthetic Amber/Orange
-    case "DESIGN":
-      return { accent: "#db2777", light: "#fdf2f8" }; // Deep Rose Pink
-    case "MUSIC":
-      return { accent: "#dc2626", light: "#fef2f2" }; // Aesthetic Crimson Red
-    case "DANCE":
-      return { accent: "#65a30d", light: "#f7fee7" }; // Olive/Lime Green
-    case "DRAMATICS":
-      return { accent: "#ea580c", light: "#fff5f1" }; // Rich Orange-Red
-    case "PHOTOGRAPHY":
-      return { accent: "#2563eb", light: "#eff6ff" }; // Royal Blue
-    case "LITERARY":
-      return { accent: "#7c3aed", light: "#f5f3ff" }; // Deep Violet
-    default:
-      return { accent: "#ca8a04", light: "#fef9c3" }; // Warm Gold/Yellow
-  }
-};
+
 
 function ClubCardItem({ club, index }) {
   const [imgError, setImgError] = useState(false);

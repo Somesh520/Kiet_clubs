@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 import { motion } from "framer-motion";
 import styles from "../../ClubDetail.module.css";
-import { ALL_CLUBS } from "../../../data/registry";
+import { ALL_CLUBS, getCategoryColors } from "../../../data/registry";
 
 // Flat list of all clubs
 const allClubs = ALL_CLUBS;
@@ -18,87 +18,7 @@ const getSlug = (name) => {
     .replace(/(^-|-$)/g, "");
 };
 
-// Neobrutalist Dynamic Colors
-const getCategoryColors = (category) => {
-  const normalized = (category || "").toUpperCase();
-  switch (normalized) {
-    case "CODING":
-    case "CYBERSECURITY":
-      return { accent: "#059669", light: "#ecfdf5" }; // Premium Emerald Green
-    case "ROBOTICS":
-    case "INNOVATION":
-      return { accent: "#d97706", light: "#fef3c7" }; // Aesthetic Amber/Orange
-    case "DESIGN":
-      return { accent: "#db2777", light: "#fdf2f8" }; // Deep Rose Pink
-    case "MUSIC":
-      return { accent: "#dc2626", light: "#fef2f2" }; // Aesthetic Crimson Red
-    case "DANCE":
-      return { accent: "#65a30d", light: "#f7fee7" }; // Olive/Lime Green
-    case "DRAMATICS":
-      return { accent: "#ea580c", light: "#fff5f1" }; // Rich Orange-Red
-    case "PHOTOGRAPHY":
-      return { accent: "#2563eb", light: "#eff6ff" }; // Royal Blue
-    case "LITERARY":
-      return { accent: "#7c3aed", light: "#f5f3ff" }; // Deep Violet
-    default:
-      return { accent: "#ca8a04", light: "#fef9c3" }; // Warm Gold/Yellow
-  }
-};
 
-// Neobrutalist Category-Specific Feature Grids
-const getCategoryFeatures = (category) => {
-  const normalized = (category || "").toUpperCase();
-  if (normalized === "CODING" || normalized === "CYBERSECURITY") {
-    return [
-      { icon: "💻", title: "Active GitHub", desc: "Collaborate on real-world open source projects and track sprint issues." },
-      { icon: "⚡", title: "Weekly Sprints", desc: "Fast-paced learning cycles with weekend build workshops." },
-      { icon: "🏆", title: "Hackathon Prep", desc: "Special mentorship pipelines for national and international contests." },
-      { icon: "👥", title: "Peer Mentorship", desc: "Direct 1-on-1 code reviews and system design sessions with seniors." }
-    ];
-  } else if (normalized === "ROBOTICS" || normalized === "INNOVATION") {
-    return [
-      { icon: "🤖", title: "Hardware Lab", desc: "Access microcontrollers, sensors, 3D printers, and mechanical tools." },
-      { icon: "💡", title: "Project Funding", desc: "Financial support for verified student research and hardware models." },
-      { icon: "⚙️", title: "Robocon Training", desc: "A rigorous track preparing teams for prestigious national leagues." },
-      { icon: "📐", title: "CAD Designing", desc: "Learn industry-grade modeling software (SolidWorks, AutoCAD)." }
-    ];
-  } else if (normalized === "DESIGN") {
-    return [
-      { icon: "🎨", title: "UI/UX Portfolios", desc: "Build industry-ready case studies and interactive design prototypes." },
-      { icon: "✨", title: "Figma Workshops", desc: "Learn layout grids, component systems, auto-layout, and micro-interactions." },
-      { icon: "🏷️", title: "Brand Identity", desc: "Create visual branding assets, logos, and design standards for campus fests." },
-      { icon: "👁️", title: "Creative Reviews", desc: "Constructive feedback loops to iterate designs and improve aesthetics." }
-    ];
-  } else if (normalized === "MUSIC" || normalized === "DANCE" || normalized === "DRAMATICS") {
-    return [
-      { icon: "🎤", title: "Live Stages", desc: "Perform live at prime campus festivals, college fests, and cultural nights." },
-      { icon: "🎹", title: "Jam Sessions", desc: "Collaborative studio practices, acoustics experiments, and band formations." },
-      { icon: "🌟", title: "Annual Fests", desc: "Organize and lead competitive stages with colleges across India." },
-      { icon: "💃", title: "Choreography", desc: "Step-by-step masterclasses spanning classical, folk, and contemporary styles." }
-    ];
-  } else if (normalized === "PHOTOGRAPHY") {
-    return [
-      { icon: "📷", title: "Studio Equipment", desc: "Access high-end cameras, studio lights, stabilizers, and prime lenses." },
-      { icon: "🎬", title: "Film Screenings", desc: "Host screenings for short films, cinematic sequences, and documentaries." },
-      { icon: "🖼️", title: "Exhibition Space", desc: "Display your framed photographs in campus corridors and art galas." },
-      { icon: "🖥️", title: "Editing Suites", desc: "Learn advanced color grading and photo editing in Premiere and Lightroom." }
-    ];
-  } else if (normalized === "LITERARY") {
-    return [
-      { icon: "🗣️", title: "Debate Slams", desc: "Hone public speaking skills through formal British Parliamentary debates." },
-      { icon: "📝", title: "Poetry Circles", desc: "Share original compositions, poetry slams, and creative writing prompts." },
-      { icon: "🇺🇳", title: "MUN Delegations", desc: "Receive training to represent the college at Model United Nations." },
-      { icon: "📖", title: "Writing Prompts", desc: "Contribute stories and editorials to the official campus newsletters." }
-    ];
-  } else {
-    return [
-      { icon: "🤝", title: "Community First", desc: "A welcoming ecosystem designed for collaborative development and learning." },
-      { icon: "🔥", title: "Skill Bootcamps", desc: "Structured training sessions and hands-on workshops throughout the year." },
-      { icon: "🎯", title: "Campus Impact", desc: "Lead projects and events that shape student life and leave a legacy." },
-      { icon: "🎓", title: "Career Network", desc: "Connect with alumni working in top organizations for mentorship and referrals." }
-    ];
-  }
-};
 
 
 
@@ -107,6 +27,7 @@ export default function TechnicalClubDetailPage() {
   const [imgError, setImgError] = useState(false);
   const [activeTab, setActiveTab] = useState("About");
   const [lightboxImg, setLightboxImg] = useState(null);
+  const [expandedEventIdx, setExpandedEventIdx] = useState(null);
 
   const slug = params ? params.slug : "";
   const club = allClubs.find((c) => getSlug(c.name) === slug && c.type === "technical");
@@ -132,7 +53,6 @@ export default function TechnicalClubDetailPage() {
   }
 
   const colors = getCategoryColors(club.category);
-  const features = getCategoryFeatures(club.category);
   const leaders = club.studentLeaders || [];
 
   const backUrl = "/campus-life/technical";
@@ -230,21 +150,9 @@ export default function TechnicalClubDetailPage() {
           {activeTab === "About" && (
             <section className={styles.missionSection}>
               <h2 className={styles.sectionHeading}>The Mission</h2>
-              <div className={styles.missionGrid}>
-                <div className={styles.descriptionBox}>
-                  <div className={styles.cardTag}>THE MISSION</div>
-                  <p className={styles.descriptionText}>{club.description}</p>
-                </div>
-                <div className={styles.featuresGrid}>
-                  {features.map((feat, idx) => (
-                    <div key={idx} className={styles.featureCard}>
-                      <span className={styles.featureNumber}>0{idx + 1}</span>
-                      <span className={styles.featureIcon}>{feat.icon}</span>
-                      <h4 className={styles.featureTitle}>{feat.title}</h4>
-                      <span className={styles.featureDesc}>{feat.desc}</span>
-                    </div>
-                  ))}
-                </div>
+              <div className={styles.descriptionBox}>
+                <div className={styles.cardTag}>THE MISSION</div>
+                <p className={styles.descriptionText}>{club.description}</p>
               </div>
             </section>
           )}
@@ -328,15 +236,40 @@ export default function TechnicalClubDetailPage() {
                           <span className={styles.eventDateDay}>{day}</span>
                           <span className={styles.eventDateMonth}>{month}</span>
                         </div>
-                        <div className={styles.eventContentColumn}>
-                          <h4 className={styles.eventTitle}>{evt.title}</h4>
-                          <p className={styles.eventDesc}>{evt.desc}</p>
-                        </div>
-                        {evt.img && (
-                          <div className={styles.eventImgWrapper} onClick={() => setLightboxImg(evt.img)}>
-                            <img src={evt.img} alt={evt.title} className={styles.eventImg} />
+                        <div className={styles.eventMainContent}>
+                          <div className={styles.eventContentColumn}>
+                            <h4 className={styles.eventTitle}>{evt.title}</h4>
+                            <p className={styles.eventDesc}>{evt.desc}</p>
+                            {evt.img && (
+                              <button 
+                                onClick={() => setExpandedEventIdx(expandedEventIdx === idx ? null : idx)}
+                                className={styles.eventToggleBtn}
+                              >
+                                <span>{expandedEventIdx === idx ? "📂 HIDE ATTACHMENT ▲" : "📁 VIEW ATTACHMENT (1) ▼"}</span>
+                              </button>
+                            )}
                           </div>
-                        )}
+                          {evt.img && expandedEventIdx === idx && (
+                            <motion.div
+                              initial={{ height: 0, opacity: 0 }}
+                              animate={{ height: "auto", opacity: 1 }}
+                              transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+                              className={styles.eventImgDropdown}
+                              onClick={() => setLightboxImg(evt.img)}
+                            >
+                              <div className={styles.eventImgHeader}>
+                                <div className={styles.eventImgHeaderLeft}>
+                                  <span className={styles.eventImgDot}></span>
+                                  <span>LIVE PREVIEW // EVENT_PHOTO_0{idx + 1}.JPG</span>
+                                </div>
+                                <div className={styles.eventImgHeaderRight}>
+                                  CLICK TO ZOOM 🔍
+                                </div>
+                              </div>
+                              <img src={evt.img} alt={evt.title} className={styles.eventImgLarge} />
+                            </motion.div>
+                          )}
+                        </div>
                       </div>
                     );
                   })}

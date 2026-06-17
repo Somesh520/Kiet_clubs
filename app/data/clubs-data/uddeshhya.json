@@ -15,6 +15,60 @@
       "img": ""
     }
   ],
-  "studentLeaders": [],
-  "achievements": []
+  "studentLeaders": [
+    {
+      "name": "Md. Asif Raja ",
+      "role": "President",
+      "img": ""
+    },
+    {
+      "name": "Aryan Gupta",
+      "role": "Vice President",
+      "img": ""
+    }
+  ],
+  "achievements": [
+    {
+      "title": "Winner of Mime Competition (Institute Level)",
+      "desc": "Team Uddeshhya secured the winning position at the institute-level competition held on April 2, 2026.",
+      "img": ""
+    },
+    {
+      "title": "Winner of Mime Competition (Inter-Institute Level)",
+      "desc": "The team achieved a winning performance at the inter-institute mime competition held on April 4, 2026.",
+      "img": ""
+    }
+  ],
+  "events": [
+    {
+      "title": "Clothes Distribution Drive",
+      "desc": "Organized on June 8, 2025, in collaboration with the Sadaneera Foundation under the IYAANAT initiative.",
+      "img": ""
+    },
+    {
+      "title": "Shaan-e-Tiranga & Operation Sindoor",
+      "desc": "An Independence Day event held on August 15, 2025, honoring soldiers and celebrating the spirit of freedom.",
+      "img": ""
+    },
+    {
+      "title": "Deepotsav",
+      "desc": "A pre-Diwali celebration held at KIET Group of Institutions on October 17, 2025, featuring decorated stalls and student activities.",
+      "img": ""
+    },
+    {
+      "title": "Blood Donation Camp",
+      "desc": "Collaborative event with Lions Club and NSS held on November 10, 2025.",
+      "img": ""
+    },
+    {
+      "title": "Christmas Celebration",
+      "desc": "A heartfelt celebration held on December 25, 2025, with children from the Ravli and Raj Nagar slums.",
+      "img": ""
+    },
+    {
+      "title": "Sanitary Pad Distribution Program",
+      "desc": "Conducted on February 21, 2026, in the slums of Ravli and Rajnagar to provide essential hygiene products.",
+      "img": ""
+    }
+  ]
 }
