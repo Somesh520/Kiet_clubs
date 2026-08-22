@@ -1,0 +1,668 @@
+/* CategoryWidgets.module.css */
+
+.widgetContainer {
+  margin: 1rem 0;
+  border: 3px solid #000;
+  background-color: #fff;
+  box-shadow: 4px 4px 0px #000;
+  padding: 1rem;
+  font-family: 'Space Grotesk', sans-serif;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   1. CODING & CYBERSECURITY TERMINAL
+   ─────────────────────────────────────────────────────────────────────────── */
+.terminalContainer {
+  background-color: #0c0f12;
+  color: #38bdf8;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 0.75rem;
+  border-radius: 4px;
+  min-height: 110px;
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.terminalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #1e293b;
+  padding-bottom: 0.35rem;
+  margin-bottom: 0.5rem;
+  color: #64748b;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+
+.terminalOutput {
+  flex-grow: 1;
+  overflow-y: auto;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+  max-height: 70px;
+}
+
+.terminalLine {
+  margin-bottom: 0.2rem;
+  word-break: break-all;
+}
+
+.terminalPrompt {
+  color: #10b981;
+  font-weight: bold;
+  margin-right: 0.25rem;
+}
+
+.terminalCursor {
+  display: inline-block;
+  width: 6px;
+  height: 12px;
+  background-color: #38bdf8;
+  animation: blink 1s infinite steps(2, start);
+  vertical-align: middle;
+}
+
+.terminalControls {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.terminalBtn {
+  background-color: #1e293b;
+  border: 1px solid #475569;
+  color: #cbd5e1;
+  font-size: 0.7rem;
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+  border-radius: 3px;
+  font-family: inherit;
+  transition: all 0.15s ease;
+}
+
+.terminalBtn:hover {
+  background-color: #38bdf8;
+  color: #000;
+  border-color: #38bdf8;
+}
+
+@keyframes blink {
+  to { visibility: hidden; }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   2. MUSIC PLAYER (VINYL & EQUALIZER)
+   ─────────────────────────────────────────────────────────────────────────── */
+.musicWrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.vinylContainer {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  flex-shrink: 0;
+}
+
+.vinylRecord {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle, #333 10%, #111 25%, #222 35%, #050505 50%, #1a1a1a 70%, #000 100%);
+  border: 2px solid #000;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+.vinylRecord::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 22px;
+  height: 22px;
+  background-color: var(--accent-color, #dc2626);
+  border-radius: 50%;
+  border: 2px solid #000;
+}
+
+.vinylRecord::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 5px;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.spinning {
+  animation: spin 3s linear infinite;
+}
+
+.equalizer {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 35px;
+  flex-grow: 1;
+}
+
+.eqBar {
+  flex-grow: 1;
+  width: 6px;
+  background-color: var(--accent-color, #dc2626);
+  border: 1px solid #000;
+  height: 4px;
+  transition: height 0.15s ease;
+}
+
+.eqBarActive {
+  animation: eqBounce 0.8s ease infinite alternate;
+}
+
+.eqBar:nth-child(2) { animation-delay: 0.15s; }
+.eqBar:nth-child(3) { animation-delay: 0.3s; }
+.eqBar:nth-child(4) { animation-delay: 0.05s; }
+.eqBar:nth-child(5) { animation-delay: 0.25s; }
+.eqBar:nth-child(6) { animation-delay: 0.1s; }
+
+.playBtn {
+  background-color: #fff;
+  border: 2px solid #000;
+  box-shadow: 2px 2px 0px #000;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 0.75rem;
+  padding: 0.35rem 0.75rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  text-transform: uppercase;
+}
+
+.playBtn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0px var(--accent-color);
+}
+
+.playBtn:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0px var(--accent-color);
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes eqBounce {
+  0% { height: 4px; }
+  100% { height: 35px; }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   3. DANCE FLOOR GRID
+   ─────────────────────────────────────────────────────────────────────────── */
+.danceContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.danceFloor {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+  background-color: #000;
+  border: 2px solid #000;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.danceCell {
+  aspect-ratio: 1.6;
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  transition: background-color 0.1s ease;
+}
+
+.danceControls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  font-weight: bold;
+  gap: 1rem;
+}
+
+.bpmSlider {
+  flex-grow: 1;
+  accent-color: var(--accent-color, #65a30d);
+  cursor: pointer;
+  height: 6px;
+  background: #ddd;
+  border: 1px solid #000;
+  outline: none;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   4. DRAMATICS curtain & spotlight
+   ─────────────────────────────────────────────────────────────────────────── */
+.theaterStage {
+  position: relative;
+  height: 110px;
+  background-color: #111;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: crosshair;
+}
+
+.stageSpotlight {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  background: radial-gradient(circle, rgba(255,255,255,0.7) 10%, rgba(234,88,12,0.3) 50%, transparent 70%);
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.curtainLeft, .curtainRight {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  background-color: #b91c1c;
+  background-image: repeating-linear-gradient(90deg, transparent, transparent 10px, rgba(0,0,0,0.15) 10px, rgba(0,0,0,0.15) 20px);
+  border: 1.5px solid #000;
+  transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+  z-index: 5;
+}
+
+.curtainLeft {
+  left: 0;
+  transform-origin: left;
+}
+
+.curtainRight {
+  right: 0;
+  transform-origin: right;
+}
+
+.curtainsOpen .curtainLeft {
+  transform: scaleX(0.15);
+}
+
+.curtainsOpen .curtainRight {
+  transform: scaleX(0.15);
+}
+
+.stageContent {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  z-index: 2;
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.stageMasks {
+  font-size: 1.8rem;
+  margin-bottom: 0.25rem;
+  animation: float 2s ease-in-out infinite alternate;
+}
+
+.stageBtn {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  z-index: 10;
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #fff;
+  font-size: 0.65rem;
+  font-family: inherit;
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+}
+
+@keyframes float {
+  from { transform: translateY(0px) rotate(-3deg); }
+  to { transform: translateY(-5px) rotate(3deg); }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   5. CAMERA VIEWFINDER & FILTER
+   ─────────────────────────────────────────────────────────────────────────── */
+.viewfinderContainer {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 2px solid #000;
+}
+
+.viewfinderOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 10px solid transparent;
+  pointer-events: none;
+  z-index: 4;
+}
+
+/* Viewfinder Corners */
+.viewfinderOverlay::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+}
+.viewfinderOverlay::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  width: 12px;
+  height: 12px;
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+}
+
+.recBadge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 5;
+  background-color: rgba(0,0,0,0.6);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: bold;
+  padding: 0.15rem 0.4rem;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.recDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #ef4444;
+  animation: recFlash 1s infinite alternate;
+}
+
+@keyframes recFlash {
+  from { opacity: 0.2; }
+  to { opacity: 1; }
+}
+
+.filterPanel {
+  display: flex;
+  gap: 0.25rem;
+  margin-top: 0.5rem;
+  justify-content: center;
+}
+
+.filterBtn {
+  background-color: #fff;
+  border: 2px solid #000;
+  font-size: 0.65rem;
+  font-weight: bold;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.filterBtnActive {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Shutter Animation Overlay */
+.cameraShutter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 20;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.shutterClick {
+  animation: shutterTrigger 0.25s ease-out;
+}
+
+@keyframes shutterTrigger {
+  0% { opacity: 0; }
+  30% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   6. TYPEWRITER SCROLL
+   ─────────────────────────────────────────────────────────────────────────── */
+.scrollContainer {
+  background-color: #fefcf3;
+  border: 2px dashed #ca8a04;
+  padding: 0.75rem;
+  min-height: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Instrument Serif', Georgia, serif;
+}
+
+.scrollPaper {
+  flex-grow: 1;
+  font-size: 1.15rem;
+  line-height: 1.3;
+  color: #451a03;
+  margin-bottom: 0.5rem;
+}
+
+.scrollQuotesBtn {
+  align-self: flex-end;
+  background-color: #f59e0b;
+  color: #000;
+  border: 2px solid #000;
+  font-size: 0.65rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 800;
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+  box-shadow: 2px 2px 0px #000;
+}
+
+.scrollQuotesBtn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0px #000;
+}
+
+.scrollQuotesBtn:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0px #000;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   7. DESIGN WORKSPACE GRID
+   ─────────────────────────────────────────────────────────────────────────── */
+.designCanvas {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: #fafafa;
+  background-image: linear-gradient(#e5e7eb 1px, transparent 1px), linear-gradient(90deg, #e5e7eb 1px, transparent 1px);
+  background-size: 10px 10px;
+  border: 2px solid #000;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.paletteRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.paletteLabel {
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #374151;
+}
+
+.colorSwatches {
+  display: flex;
+  gap: 6px;
+}
+
+.swatch {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.swatch:hover {
+  transform: scale(1.2);
+}
+
+.swatchActive {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #000;
+  transform: scale(1.1);
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   8. ROBOTICS MECHANICAL GEARS
+   ─────────────────────────────────────────────────────────────────────────── */
+.roboticsWrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.gearAssembly {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  flex-shrink: 0;
+}
+
+.gearBig {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform-origin: center;
+}
+
+.gearSmall {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 32px;
+  height: 32px;
+  transform-origin: center;
+}
+
+.rotateClockwise {
+  animation: gearTurn 5s linear infinite;
+}
+
+.rotateCounterClockwise {
+  animation: gearTurnReverse 3.2s linear infinite;
+}
+
+@keyframes gearTurn {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes gearTurnReverse {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+
+.diagnosticMetrics {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.metricRow {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.metricLabelRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.65rem;
+  font-weight: bold;
+}
+
+.metricBarOuter {
+  height: 6px;
+  background-color: #e5e7eb;
+  border: 1px solid #000;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.metricBarInner {
+  height: 100%;
+  background-color: var(--accent-color, #d97706);
+  transition: width 0.3s ease;
+}
+
+.diagnosticsBtn {
+  align-self: flex-start;
+  background-color: #fff;
+  border: 2px solid #000;
+  box-shadow: 2px 2px 0px #000;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 0.65rem;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+}
+
+.diagnosticsBtn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0px var(--accent-color);
+}

@@ -23,6 +23,7 @@ import saekiet from './clubs-data/saekiet.json';
 import socio_tech_innovation_club from './clubs-data/socio-tech-innovation-club.json';
 import technocrats from './clubs-data/technocrats.json';
 import kiet_music_club from './clubs-data/kiet-music-club.json';
+import kiet_design_club from './clubs-data/kiet-design-club.json';
 import phoenix_dance_crew from './clubs-data/phoenix-dance-crew.json';
 import steppers_dance_crew from './clubs-data/steppers-dance-crew.json';
 import vpaksh_kiet_dramatics_society from './clubs-data/vpaksh-kiet-dramatics-society.json';
@@ -67,7 +68,8 @@ const rawTechnical = [
   pharma_innovation_club,
   saekiet,
   socio_tech_innovation_club,
-  technocrats
+  technocrats,
+  kiet_design_club
 ];
 
 const rawCultural = [
